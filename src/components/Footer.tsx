@@ -1,5 +1,5 @@
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
-import cairoNightsLogo from '@/assets/cairo-nights-logo.png';
+import cairoLogo from '@/assets/cairo-logo.png';
 
 export const Footer = () => {
   const contactInfo = {
@@ -13,31 +13,23 @@ export const Footer = () => {
   };
 
   const quickLinks = [
-    { name: 'About Us', href: '#about' },
+    { name: 'About Us', href: '/about-us' },
     { name: 'Menu', href: '#menu' },
     { name: 'Events', href: '#events' },
     { name: 'Function Room', href: '#function' },
     { name: 'Contact Us', href: '#contact' }
   ];
 
-  const faqs = [
-    "How do I book for an event or show night?",
-    "Is there a cover charge for live performances?",
-    "What time do the live shows start?",
-    "Do you host private events or birthdays?",
-    "Is there a dress code for weekend events?",
-    "Can I bring children to the entertainment nights?"
-  ];
 
   return (
     <footer className="bg-gradient-dark border-t border-primary/20">
       <div className="max-w-7xl mx-auto section-padding">
         {/* Main Footer Content */}
-        <div className="grid lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid lg:grid-cols-3 gap-12 mb-12">
           {/* Logo and Description */}
           <div className="lg:col-span-1 space-y-6">
             <img
-              src={cairoNightsLogo}
+              src={cairoLogo}
               alt="Cairo Nights Restaurant & Bar"
               className="h-16 w-auto"
             />
@@ -110,19 +102,6 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* FAQs */}
-          <div className="space-y-6">
-            <h3 className="font-playfair text-xl font-semibold egyptian-gold">
-              Got Questions About Cairo Nights?
-            </h3>
-            <ul className="space-y-2">
-              {faqs.map((faq, index) => (
-                <li key={index} className="text-sm text-muted-foreground">
-                  {faq}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         {/* Reservation CTA */}
