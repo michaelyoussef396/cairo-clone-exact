@@ -44,29 +44,69 @@ export const TestimonialSection = () => {
           </div>
         </div>
 
-        {/* Second Testimonial */}
-        <div className="text-center mb-12">
-          <h3 className="font-playfair text-2xl md:text-3xl font-semibold mb-8">
-            What Our Customer says
-          </h3>
+        {/* Second Testimonial - Enhanced Desktop Layout */}
+        <div className="mb-12">
+          <div className="text-center mb-12">
+            <h3 className="font-playfair text-2xl md:text-3xl font-semibold mb-8">
+              What Our Customer says
+            </h3>
+          </div>
           
-          <div className="max-w-4xl mx-auto">
-            <h4 className="font-playfair text-xl md:text-2xl font-semibold mb-6 egyptian-gold">
-              "What a Live Egyptian Night in the Heart of Melbourne"
-            </h4>
-            
-            <div className="testimonial-card text-left">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary text-xl">👤</span>
+          {/* Featured Testimonial Card */}
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-3 gap-12 items-center">
+              {/* Left: Quote Mark & Title */}
+              <div className="lg:col-span-1 text-center lg:text-left">
+                <div className="egyptian-gold text-6xl md:text-8xl font-playfair font-bold mb-4 leading-none">
+                  "
                 </div>
-                <div>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    "Had such a fantastic night at Cairo Nights. Food was delicious and we went on a 
-                    Saturday night and there was a beautiful lady doing belly dancing which really added 
-                    to the atmosphere. The music was great as well. Thank you Sonny, I'll definitely be back again!"
-                  </p>
-                  <p className="font-semibold text-primary">-- Krystalia T</p>
+                <h4 className="font-playfair text-xl md:text-2xl font-semibold egyptian-gold leading-tight">
+                  What a Live Egyptian Night in the Heart of Melbourne
+                </h4>
+              </div>
+
+              {/* Center: Testimonial Content */}
+              <div className="lg:col-span-2">
+                <div className="testimonial-card relative">
+                  {/* Decorative Egyptian Pattern */}
+                  <div className="absolute top-0 right-0 w-20 h-20 egyptian-gold opacity-20 text-6xl font-bold">
+                    ✦
+                  </div>
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-start gap-6">
+                      {/* Customer Avatar */}
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold">
+                          <span className="text-primary-foreground text-2xl font-bold">K</span>
+                        </div>
+                      </div>
+                      
+                      {/* Testimonial Text */}
+                      <div className="flex-1">
+                        <p className="text-muted-foreground leading-relaxed text-lg mb-6 italic">
+                          "Had such a fantastic night at Cairo Nights. Food was delicious and we went on a 
+                          Saturday night and there was a beautiful lady doing belly dancing which really added 
+                          to the atmosphere. The music was great as well. Thank you Sonny, I'll definitely be back again!"
+                        </p>
+                        
+                        {/* Customer Info */}
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <p className="font-semibold text-primary text-lg">Krystalia T</p>
+                            <p className="text-sm text-muted-foreground">Verified Customer</p>
+                          </div>
+                          
+                          {/* Star Rating */}
+                          <div className="flex items-center gap-1">
+                            {[...Array(5)].map((_, i) => (
+                              <span key={i} className="text-primary text-xl">★</span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
