@@ -7,7 +7,7 @@ export const Header = () => {
 
   const navItems = [
     { name: 'About Us', href: '/about-us' },
-    { name: 'Menu', href: '#menu' },
+    { name: 'Menu', href: '/menu' },
     { name: 'Events', href: '/events' },
     { name: 'Function Room', href: '/function-room' },
     { name: 'Contact US', href: '/contact-us' }
