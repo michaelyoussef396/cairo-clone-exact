@@ -19,15 +19,17 @@ export const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <img
-              src={cairoLogo}
-              alt="Cairo Nights Restaurant & Bar"
-              className="h-12 w-auto"
-            />
+            <a href="/" className="flex items-center">
+              <img
+                src={cairoLogo}
+                alt="Cairo Nights Restaurant & Bar"
+                className="h-12 w-auto"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <a
@@ -42,7 +44,7 @@ export const Header = () => {
           </div>
 
           {/* Reserve Now Button */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <a
               href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
               className="reserve-button"
@@ -54,7 +56,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-foreground hover:text-primary transition-colors duration-300"
@@ -70,7 +72,7 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-secondary/90 backdrop-blur-md rounded-lg mt-2">
               {navItems.map((item) => (
                 <a

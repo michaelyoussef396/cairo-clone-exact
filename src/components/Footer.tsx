@@ -25,14 +25,16 @@ export const Footer = () => {
     <footer className="bg-gradient-dark border-t border-primary/20">
       <div className="max-w-7xl mx-auto section-padding">
         {/* Main Footer Content */}
-        <div className="grid lg:grid-cols-3 gap-12 mb-12">
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-16 mb-12">
           {/* Logo and Description */}
           <div className="lg:col-span-1 space-y-6">
-            <img
-              src={cairoLogo}
-              alt="Cairo Nights Restaurant & Bar"
-              className="h-16 w-auto"
-            />
+            <a href="/" className="inline-block">
+              <img
+                src={cairoLogo}
+                alt="Cairo Nights Restaurant & Bar"
+                className="h-16 w-auto"
+              />
+            </a>
             <p className="text-muted-foreground leading-relaxed">
               Experience authentic Egyptian cuisine, live belly dancing, and premium shisha 
               in the heart of Carlton, Melbourne.
