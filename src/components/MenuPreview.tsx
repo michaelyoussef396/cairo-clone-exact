@@ -3,6 +3,8 @@ import entreeImage from '@/assets/entree.jpg';
 import mainDish1 from '@/assets/main-dish-1.jpg';
 import mainDish2 from '@/assets/main-dish-2.jpg';
 import beveragesImage from '@/assets/beverages.jpg';
+import fullTable from '@/assets/full-table.jpg';
+import shishaServed from '@/assets/shisha.jpg';
 
 export const MenuPreview = () => {
   const menuCategories = [
@@ -31,6 +33,45 @@ export const MenuPreview = () => {
   return (
     <section id="menu" className="section-padding">
       <div className="max-w-7xl mx-auto">
+        {/* Dine, Unwind, and Experience Section */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="space-y-6">
+            <h3 className="font-playfair text-2xl md:text-3xl font-semibold">
+              Dine, Unwind, and Experience <span className="egyptian-gold">Cairo in Melbourne</span>
+            </h3>
+            
+            <div className="testimonial-card">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-primary text-xl">👤</span>
+                </div>
+                <div>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    "The food was just as amazing as always. Ending the night with a warm Om Ali, 
+                    a glass of mint tea, and a smooth shisha, all while listening to the ambient 
+                    Egyptian music, truly makes for the perfect evening. Cairo Nights never disappoints!"
+                  </p>
+                  <p className="font-semibold text-primary">-- Irene Izquierdo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src={fullTable}
+              alt="A full table of food"
+              className="w-full aspect-square object-cover rounded-lg"
+            />
+            <img
+              src={shishaServed}
+              alt="Shisha being served"
+              className="w-full aspect-square object-cover rounded-lg"
+            />
+          </div>
+        </div>
+
+        {/* Menu Section */}
         <div className="text-center mb-16">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
             A Menu Crafted with <span className="egyptian-gold">Generations of Flavor</span>
