@@ -99,30 +99,17 @@ const Events = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Thursday */}
-            <div className="bg-card/50 backdrop-blur-sm rounded-xl p-8 border border-border/50 hover:scale-105 transition-transform duration-300">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold mb-4 egyptian-gold">Thursday</h3>
-                <h4 className="text-xl font-semibold mb-4 text-foreground">Belly Dance Night</h4>
-                <p className="text-muted-foreground mb-6">
-                  Experience authentic Egyptian belly dance performances by professional dancers
-                </p>
-                <div className="text-accent font-medium">
-                  Shows: 8:00 PM & 10:00 PM
-                </div>
-              </div>
-            </div>
-
             {/* Friday */}
             <div className="bg-card/50 backdrop-blur-sm rounded-xl p-8 border border-border/50 hover:scale-105 transition-transform duration-300">
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4 egyptian-gold">Friday</h3>
-                <h4 className="text-xl font-semibold mb-4 text-foreground">Live Music & Dance</h4>
+                <h4 className="text-xl font-semibold mb-4 text-foreground">Belly Dance & Live Performance</h4>
                 <p className="text-muted-foreground mb-6">
-                  Live Arabic music with traditional oud and belly dance performances
+                  Belly dancer at 9pm followed by live dance performances
                 </p>
                 <div className="text-accent font-medium">
-                  Shows: 8:30 PM & 10:30 PM
+                  Belly Dancer: 9:00 PM<br />
+                  Live Dancer: 8:00 PM - 11:00 PM
                 </div>
               </div>
             </div>
@@ -131,12 +118,27 @@ const Events = () => {
             <div className="bg-card/50 backdrop-blur-sm rounded-xl p-8 border border-border/50 hover:scale-105 transition-transform duration-300">
               <div className="text-center">
                 <h3 className="text-2xl font-bold mb-4 egyptian-gold">Saturday</h3>
-                <h4 className="text-xl font-semibold mb-4 text-foreground">Egyptian Party Night</h4>
+                <h4 className="text-xl font-semibold mb-4 text-foreground">Belly Dance Show</h4>
                 <p className="text-muted-foreground mb-6">
-                  Full Egyptian experience with music, dance, and celebration
+                  Authentic Egyptian belly dance performance by professional dancers
                 </p>
                 <div className="text-accent font-medium">
-                  All Night Entertainment
+                  Belly Dancer: 9:00 PM
+                </div>
+              </div>
+            </div>
+
+            {/* Sunday */}
+            <div className="bg-card/50 backdrop-blur-sm rounded-xl p-8 border border-border/50 hover:scale-105 transition-transform duration-300">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4 egyptian-gold">Sunday</h3>
+                <h4 className="text-xl font-semibold mb-4 text-foreground">Belly Dance & Live Performance</h4>
+                <p className="text-muted-foreground mb-6">
+                  Belly dancer at 9pm followed by live dance performances
+                </p>
+                <div className="text-accent font-medium">
+                  Belly Dancer: 9:00 PM<br />
+                  Live Dancer: 8:00 PM - 11:00 PM
                 </div>
               </div>
             </div>
