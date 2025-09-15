@@ -4,6 +4,7 @@ import { StatsSection } from '@/components/StatsSection';
 import { MenuPreview } from '@/components/MenuPreview';
 import { TestimonialSection } from '@/components/TestimonialSection';
 import { FAQSection } from '@/components/FAQSection';
+import { Footer } from '@/components/Footer';
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
         <TestimonialSection />
         <FAQSection />
       </main>
+      <Footer />
     </div>
   );
 };
