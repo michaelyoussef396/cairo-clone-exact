@@ -26,8 +26,8 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/function-room" element={<FunctionRoom />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          {/* <Route path="/menu" element={<Menu />} /> */}
           <Route path="/menu" element={<NewMenu />} />
+          <Route path="/old-menu-admin" element={<Menu />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
