@@ -1,9 +1,9 @@
 export const StatsSection = () => {
   const stats = [
-    { number: '8+', label: 'Live Performances Monthly' },
-    { number: '5000+', label: 'Served Customers' },
-    { number: '15000+', label: 'Served Dishes' },
-    { number: '1400+', label: 'Reviews' }
+    { number: '8+', label: 'EVENTS MONTHLY' },
+    { number: '5', label: 'EXPERT CHEFS' },
+    { number: '5000+', label: 'SERVED CUSTOMERS' },
+    { number: '15000+', label: 'SERVED DISHES' }
   ];
 
   return (

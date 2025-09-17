@@ -33,11 +33,6 @@ const AboutUs = () => {
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12">
             <strong>Cairo Nights isn't just a restaurant — it's a cultural journey<br />through the flavours, music, and soul of Egypt.</strong>
           </p>
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-            <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center text-primary">
-              <span className="text-2xl font-bold">94</span>
-            </div>
-          </div>
           <div className="animate-bounce mt-16">
             <ChevronDown className="w-8 h-8 mx-auto text-white" />
           </div>
