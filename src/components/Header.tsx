@@ -22,7 +22,7 @@ export const Header = () => {
             <a href="/" className="flex items-center">
               <img
                 src={cairoLogo}
-                alt="Cairo Nights Restaurant & Bar"
+                alt="Cairo By Nights Restaurant & Bar"
                 className="h-12 w-auto"
               />
             </a>
