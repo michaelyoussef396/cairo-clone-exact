@@ -32,7 +32,7 @@ export const Footer = () => {
               <img
                 src={cairoLogo}
                 alt="Cairo By Nights Restaurant & Bar"
-                className="h-72 w-auto"
+                className="h-96 w-auto"
               />
             </a>
             <p className="text-muted-foreground leading-relaxed">
