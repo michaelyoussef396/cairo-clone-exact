@@ -1,5 +1,5 @@
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
-import cairoLogo from '@/assets/cairo-logo.avif';
+import cairoLogo from '@/assets/cairo-by-nights-new-logo.png';
 
 export const Footer = () => {
   const contactInfo = {
