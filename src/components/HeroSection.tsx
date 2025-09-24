@@ -40,15 +40,15 @@ export const HeroSection = () => {
           {/* Left Side - Text Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="font-playfair text-9xl md:text-[10rem] lg:text-[16rem] font-bold leading-tight">
+              <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="egyptian-gold">Authentic</span><br />
                 <span className="egyptian-gold">Egyptian</span><br />
                 Dining in<br />
                 Melbourne
               </h1>
               
-              <p className="text-4xl md:text-5xl text-muted-foreground max-w-lg leading-relaxed">
-                Experience the magic of Cairo By Nights with authentic Egyptian cuisine, live 
+              <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
+                Experience the magic of Cairo Nights with authentic Egyptian cuisine, live 
                 belly dancing, Arabic music, and premium shisha in the heart of Carlton.
               </p>
             </div>
@@ -76,10 +76,10 @@ export const HeroSection = () => {
           {/* Right Side - Additional Visual Element */}
           <div className="hidden lg:block">
             <div className="text-center space-y-4">
-              <div className="egyptian-gold text-[8rem] font-playfair font-bold">
+              <div className="egyptian-gold text-6xl font-playfair font-bold">
                 Loved by Melbourne
               </div>
-              <div className="text-primary text-7xl font-playfair">
+              <div className="text-primary text-2xl font-playfair">
                 Foodies & Shisha Lovers
               </div>
             </div>

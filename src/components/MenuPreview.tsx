@@ -49,7 +49,7 @@ export const MenuPreview = () => {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     "The food was just as amazing as always. Ending the night with a warm Om Ali, 
                     a glass of mint tea, and a smooth shisha, all while listening to the ambient 
-                    Egyptian music, truly makes for the perfect evening. Cairo By Nights never disappoints!"
+                    Egyptian music, truly makes for the perfect evening. Cairo Nights never disappoints!"
                   </p>
                   <p className="font-semibold text-primary">-- Irene Izquierdo</p>
                 </div>

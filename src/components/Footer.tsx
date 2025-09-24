@@ -1,5 +1,5 @@
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
-import cairoLogo from '@/assets/cairo-by-nights-new-logo.png';
+import cairoLogo from '@/assets/cairo-logo.avif';
 
 export const Footer = () => {
   const contactInfo = {
@@ -31,8 +31,8 @@ export const Footer = () => {
             <a href="/" className="inline-block">
               <img
                 src={cairoLogo}
-                alt="Cairo By Nights Restaurant & Bar"
-                className="h-96 w-auto"
+                alt="Cairo Nights Restaurant & Bar"
+                className="h-16 w-auto"
               />
             </a>
             <p className="text-muted-foreground leading-relaxed">
@@ -124,7 +124,7 @@ export const Footer = () => {
         <div className="border-t border-primary/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 Cairo By Nights Restaurant & Bar. All rights reserved.
+              © 2024 Cairo Nights Restaurant & Bar. All rights reserved.
             </p>
             <p className="text-muted-foreground text-sm">
               Authentic Egyptian Dining in Melbourne

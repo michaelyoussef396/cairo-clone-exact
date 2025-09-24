@@ -82,7 +82,7 @@ const NewMenu = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Cairo By Nights Menu
+            Cairo Nights Menu
           </h1>
           <p className="text-xl md:text-2xl max-w-2xl mx-auto">
             Authentic Egyptian cuisine crafted with love and tradition

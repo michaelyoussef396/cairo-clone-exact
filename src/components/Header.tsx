@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import cairoLogo from '@/assets/cairo-by-nights-new-logo.png';
+import cairoLogo from '@/assets/cairo-logo.avif';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,14 +16,14 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-32">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <a href="/" className="flex items-center">
               <img
                 src={cairoLogo}
-                alt="Cairo By Nights Restaurant & Bar"
-                className="h-48 w-auto"
+                alt="Cairo Nights Restaurant & Bar"
+                className="h-12 w-auto"
               />
             </a>
           </div>
@@ -35,7 +35,7 @@ export const Header = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-inter font-medium text-2xl"
+                  className="text-foreground hover:text-primary transition-colors duration-300 font-inter font-medium"
                 >
                   {item.name}
                 </a>

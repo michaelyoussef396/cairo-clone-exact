@@ -44,7 +44,7 @@ const Events = () => {
             THE NIGHT COMES ALIVE
           </h1>
           <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight egyptian-gold">
-            AT CAIRO BY NIGHTS
+            AT CAIRO NIGHTS
           </h2>
           <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto leading-relaxed">
             From sizzling dance shows to unforgettable live music and exclusive parties — every night tells a story.
@@ -60,10 +60,10 @@ const Events = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold mb-8 egyptian-gold">
-              Unforgettable Moments at Cairo By Nights
+              Unforgettable Moments at Cairo Nights
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              From golden veils and Arabic oud to packed-out nights filled with laughter, Cairo By Nights captures the essence of Egyptian hospitality. Each photo tells a story of authentic Egyptian cuisine, belly dancing, and unforgettable cultural experiences in Carlton.
+              From golden veils and Arabic oud to packed-out nights filled with laughter, Cairo Nights captures the essence of Egyptian hospitality. Each photo tells a story of authentic Egyptian cuisine, belly dancing, and unforgettable cultural experiences in Carlton.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ const Events = () => {
               >
                 <img
                   src={image}
-                  alt={`Cairo By Nights event moment ${index + 1}`}
+                  alt={`Cairo Nights event moment ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -8,12 +8,12 @@ export const FAQSection = () => {
 
   const faqs = [
     {
-      question: "Do I need to book a table at Cairo By Nights in advance?",
+      question: "Do I need to book a table at Cairo Nights in advance?",
       answer: "Yes, we highly recommend booking in advance, especially for weekend evenings and during our live performance nights. You can book through our website or call us directly."
     },
     {
-      question: "Is Cairo By Nights a halal restaurant?",
-      answer: "Yes, Cairo By Nights is a halal-certified restaurant. All our meat is halal and we follow strict halal guidelines in our kitchen preparation."
+      question: "Is Cairo Nights a halal restaurant?",
+      answer: "Yes, Cairo Nights is a halal-certified restaurant. All our meat is halal and we follow strict halal guidelines in our kitchen preparation."
     },
     {
       question: "Do you have belly dancing or live performances?",
@@ -41,7 +41,7 @@ export const FAQSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="font-playfair text-3xl md:text-4xl font-bold mb-4">
-              Frequently Asked Questions – <span className="egyptian-gold">Cairo By Nights Carlton</span>
+              Frequently Asked Questions – <span className="egyptian-gold">Cairo Nights Carlton</span>
             </h2>
             <p className="text-muted-foreground mb-8">
               Planning your visit? Here are answers to the most common questions about our food, events, bookings, and more.
