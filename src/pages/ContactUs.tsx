@@ -152,12 +152,12 @@ const ContactUs = () => {
                 Weekend Terrace Minimum Spend Policy
               </h2>
             </div>
-            <p className="text-lg font-playfair font-semibold text-primary mb-2">
+            <p className="text-lg font-playfair font-bold text-primary mb-2">
               Important Information for Our Valued Guests
             </p>
           </div>
 
-          <div className="bg-white/70 dark:bg-black/20 rounded-xl p-8 shadow-lg border border-amber-200/50 dark:border-amber-800/30">
+          <div className="bg-white/90 dark:bg-gray-900/90 rounded-xl p-8 shadow-lg border border-amber-200/50 dark:border-amber-800/30">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-playfair font-bold mb-4 text-primary">
                 Crafting a Premium Experience
@@ -171,8 +171,8 @@ const ContactUs = () => {
                     <MapPin className="h-5 w-5 text-amber-600 dark:text-amber-400" />
                   </div>
                   <div>
-                    <h4 className="font-playfair font-semibold text-lg mb-1 text-primary">Applicable Area</h4>
-                    <p className="text-muted-foreground">Front Terrace Area (Tables 10-23)</p>
+                    <h4 className="font-playfair font-bold text-lg mb-1 text-primary">Applicable Area</h4>
+                    <p className="text-gray-900 dark:text-gray-100 font-medium text-base">Front Terrace Area (Tables 10-23)</p>
                   </div>
                 </div>
 
@@ -181,8 +181,8 @@ const ContactUs = () => {
                     <Clock className="h-5 w-5 text-amber-600 dark:text-amber-400" />
                   </div>
                   <div>
-                    <h4 className="font-playfair font-semibold text-lg mb-1 text-primary">Time Period</h4>
-                    <p className="text-muted-foreground">Weekends between 5:00 PM - 11:00 PM</p>
+                    <h4 className="font-playfair font-bold text-lg mb-1 text-primary">Time Period</h4>
+                    <p className="text-gray-900 dark:text-gray-100 font-medium text-base">Weekends between 5:00 PM - 11:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -193,13 +193,13 @@ const ContactUs = () => {
                     <Star className="h-5 w-5 text-amber-600 dark:text-amber-400" />
                   </div>
                   <div>
-                    <h4 className="font-playfair font-semibold text-lg mb-1 text-primary">Minimum Spend</h4>
-                    <p className="text-muted-foreground font-semibold text-lg">$40 per person</p>
+                    <h4 className="font-playfair font-bold text-lg mb-1 text-primary">Minimum Spend</h4>
+                    <p className="text-gray-900 dark:text-gray-100 font-bold text-xl">$40 per person</p>
                   </div>
                 </div>
 
-                <div className="bg-amber-50/50 dark:bg-amber-950/30 p-6 rounded-lg border border-amber-200/30 dark:border-amber-800/30">
-                  <p className="text-muted-foreground leading-relaxed italic">
+                <div className="bg-amber-50/80 dark:bg-amber-950/40 p-6 rounded-lg border border-amber-200/50 dark:border-amber-800/30">
+                  <p className="text-gray-800 dark:text-gray-200 leading-relaxed text-base font-medium italic">
                     "This policy helps us preserve the exclusive feel of our Front Terrace, ensuring every guest can enjoy the best of Cairo By Nights during our busiest hours. We appreciate your understanding and cooperation."
                   </p>
                 </div>
