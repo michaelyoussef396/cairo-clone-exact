@@ -25,7 +25,7 @@ const ContactUs = () => {
         <div className="absolute inset-0">
           <img
             src={restaurantInterior}
-            alt="Cairo Nights Restaurant Interior"
+            alt="Cairo By Nights Restaurant Interior"
             className="w-full h-full object-cover"
           />
         </div>
@@ -39,7 +39,7 @@ const ContactUs = () => {
             Contact Us
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Get in touch with Cairo Nights for reservations, events, or any inquiries about our authentic Egyptian dining experience.
+            Get in touch with Cairo By Nights for reservations, events, or any inquiries about our authentic Egyptian dining experience.
           </p>
         </div>
       </section>
@@ -52,7 +52,7 @@ const ContactUs = () => {
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6 egyptian-gold">
-                  Visit Cairo Nights
+                  Visit Cairo By Nights
                 </h2>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   Experience authentic Egyptian cuisine in the heart of Carlton, Melbourne. We're open seven days a week, ready to transport you to the flavors of Egypt.
@@ -131,7 +131,7 @@ const ContactUs = () => {
             <div className="relative">
               <img
                 src={egyptianDishes}
-                alt="Egyptian cuisine at Cairo Nights"
+                alt="Egyptian cuisine at Cairo By Nights"
                 className="w-full h-full object-cover rounded-lg shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
@@ -161,7 +161,7 @@ const ContactUs = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Cairo Nights Restaurant Location"
+              title="Cairo By Nights Restaurant Location"
             ></iframe>
           </div>
         </div>

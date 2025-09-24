@@ -95,12 +95,12 @@ const FunctionRoom = () => {
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center section-padding">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 egyptian-gold">
-            Host Unforgettable Events at Cairo Nights
+            Host Unforgettable Events at Cairo By Nights
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
             Our function room in Carlton offers an immersive Egyptian experience, ideal for birthdays, 
             corporate dinners, engagements, and private celebrations. With authentic Middle Eastern cuisine, 
-            vibrant décor, and live entertainment options like singers or belly dancers, Cairo Nights is 
+            vibrant décor, and live entertainment options like singers or belly dancers, Cairo By Nights is 
             the perfect venue for a memorable event.
           </p>
           <a
@@ -128,7 +128,7 @@ const FunctionRoom = () => {
                 An Experience Beyond Just Dining
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Transform your celebration into a sensory journey with Cairo Nights. Our event space in 
+                Transform your celebration into a sensory journey with Cairo By Nights. Our event space in 
                 Melbourne is designed for memorable moments — from bespoke Egyptian catering to live Arabic 
                 performances. Whether it's an intimate dinner or a festive gathering, our team curates every 
                 detail to deliver elegance, flavour, and unforgettable atmosphere.

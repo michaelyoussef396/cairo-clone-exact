@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import cairoLogo from '@/assets/cairo-logo.avif';
+import cairoLogo from '@/assets/cairo-by-nights-logo.png';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ export const Header = () => {
             <a href="/" className="flex items-center">
               <img
                 src={cairoLogo}
-                alt="Cairo Nights Restaurant & Bar"
+                alt="Cairo By Nights Restaurant & Bar"
                 className="h-12 w-auto"
               />
             </a>

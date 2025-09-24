@@ -25,7 +25,7 @@ export const TestimonialSection = () => {
                 </div>
                 <div>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Had such a fantastic night at Cairo Nights. Food was delicious and we went on a 
+                    Had such a fantastic night at Cairo By Nights. Food was delicious and we went on a 
                     Saturday night and there was a beautiful lady doing belly dancing which really added 
                     to the atmosphere. The music was great as well. Thank you Sonny, I'll definitely be back again!
                   </p>
@@ -38,7 +38,7 @@ export const TestimonialSection = () => {
             <div className="relative">
               <img
                 src={happyGuests}
-                alt="Happy guests enjoying live belly dancing performance at Cairo Nights Carlton"
+                alt="Happy guests enjoying live belly dancing performance at Cairo By Nights Carlton"
                 className="w-full aspect-video object-cover rounded-lg shadow-dark"
               />
             </div>

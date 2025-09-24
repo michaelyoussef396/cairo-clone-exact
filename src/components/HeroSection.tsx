@@ -48,7 +48,7 @@ export const HeroSection = () => {
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
-                Experience the magic of Cairo Nights with authentic Egyptian cuisine, live 
+                Experience the magic of Cairo By Nights with authentic Egyptian cuisine, live 
                 belly dancing, Arabic music, and premium shisha in the heart of Carlton.
               </p>
             </div>
