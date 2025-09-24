@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import cairoLogo from '@/assets/cairo-logo.avif';
+import cairoLogo from '@/assets/cairo-by-nights-logo.png';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
