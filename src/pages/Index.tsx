@@ -162,7 +162,7 @@ const Index = () => {
               </p>
 
               <p>
-                As a family-owned, halal-certified Egyptian restaurant, we take immense pride in every dish that leaves our kitchen. Our expert Egyptian chefs bring generations of culinary knowledge and traditional cooking techniques, preparing each meal with the same authentic methods used in Cairo's finest restaurants. From our signature slow-cooked tagines to perfectly charcoal-grilled kofta, every dish tells the story of Egypt's rich culinary heritage.
+                As a family-owned, halal-certified Egyptian restaurant, we take immense pride in every dish that leaves our kitchen. Our expert Egyptian chefs bring generations of culinary knowledge and traditional cooking techniques, preparing each meal with the same authentic methods used in Cairo's finest restaurants. From our signature slow-cooked tagens to perfectly charcoal-grilled kofta, every dish tells the story of Egypt's rich culinary heritage.
               </p>
 
               <p>
@@ -203,7 +203,7 @@ const Index = () => {
               <div className="bg-muted/50 p-6 rounded-lg">
                 <h3 className="text-xl font-playfair font-semibold mb-4 text-primary">Expert Egyptian Chefs</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Our kitchen is led by experienced Egyptian chefs who bring generations of culinary tradition from Cairo to Carlton. Each chef has mastered the art of authentic Egyptian cooking, ensuring every dish captures the true flavors and techniques of traditional Egyptian cuisine. From perfecting the blend of seven spices in our kofta to achieving the ideal slow-cooked tenderness in our tagines, our chefs' expertise shines in every bite.
+                  Our kitchen is led by experienced Egyptian chefs who bring generations of culinary tradition from Cairo to Carlton. Each chef has mastered the art of authentic Egyptian cooking, ensuring every dish captures the true flavors and techniques of traditional Egyptian cuisine. From perfecting the blend of seven spices in our kofta to achieving the ideal slow-cooked tenderness in our tagens, our chefs' expertise shines in every bite.
                 </p>
               </div>
 

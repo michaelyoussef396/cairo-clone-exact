@@ -404,7 +404,7 @@ const ContactUs = () => {
                 Our Menu
               </h3>
               <p className="text-muted-foreground">
-                Explore our authentic Egyptian dishes, from traditional tagines to premium grills and desserts.
+                Explore our authentic Egyptian dishes, from traditional tagens to premium grills and desserts.
               </p>
             </a>
 

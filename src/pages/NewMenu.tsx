@@ -121,7 +121,7 @@ const NewMenu = () => {
               </p>
 
               <p>
-                Traditional Egyptian cooking techniques shine throughout our menu. Our tagines slow-cook for hours in authentic clay pots, allowing lamb or chicken to achieve perfect tenderness while absorbing the complex flavors of apricots, prunes, and traditional spice combinations. Our charcoal grill masters the ancient art of Egyptian grilling, creating the distinctive smoky flavor in our kofta, lamb chops, and mixed grill platters that define authentic Egyptian barbecue.
+                Traditional Egyptian cooking techniques shine throughout our menu. Our tagens slow-cook for hours in authentic clay pots, allowing lamb or chicken to achieve perfect tenderness while absorbing the complex flavors of apricots, prunes, and traditional spice combinations. Our charcoal grill masters the ancient art of Egyptian grilling, creating the distinctive smoky flavor in our kofta, lamb chops, and mixed grill platters that define authentic Egyptian barbecue.
               </p>
 
               <p>
@@ -354,7 +354,7 @@ const NewMenu = () => {
               </p>
 
               <p>
-                Each morning, our Carlton kitchen begins fresh preparation for the evening service. Our chefs handcraft every dish using traditional Egyptian cooking methods—slow-simmering tagines, hand-rolling grape leaves, charcoal-grilling kofta skewers, and preparing fresh pita bread. This dedication to daily preparation ensures that when you dine at Cairo By Nights, you're experiencing Egyptian cuisine as it's meant to be: fresh, flavorful, and made with the care and attention that generations of Egyptian cooks have brought to their craft.
+                Each morning, our Carlton kitchen begins fresh preparation for the evening service. Our chefs handcraft every dish using traditional Egyptian cooking methods—slow-simmering tagens, hand-rolling grape leaves, charcoal-grilling kofta skewers, and preparing fresh pita bread. This dedication to daily preparation ensures that when you dine at Cairo By Nights, you're experiencing Egyptian cuisine as it's meant to be: fresh, flavorful, and made with the care and attention that generations of Egyptian cooks have brought to their craft.
               </p>
             </div>
           </div>

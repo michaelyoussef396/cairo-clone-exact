@@ -20,7 +20,7 @@ const FunctionRoom = () => {
       items: [
         "🥣 Mixed Dips for the Table",
         "🍗 Entree: Chicken Wings & Salads",
-        "🥘 Main: Choice of Tagen Lamb Roz Moammar or Chicken Couscous",
+        "🥘 Main: Choice of Tagen Lamb Roz Moammar or Molokhia with Chicken",
         "🍰 Dessert: Traditional Baklava"
       ]
     },
@@ -30,7 +30,7 @@ const FunctionRoom = () => {
       items: [
         "🥣 Mixed Dips & Bread Selection",
         "🍤 Entree: Grilled Prawns & Mixed Salads",
-        "🥘 Main: Lamb Mansaf or Chicken Shawarma with Rice",
+        "🥘 Main: Lamb Shank Fattah or Chicken Shish Kebab with Rice",
         "🍰 Dessert: Assorted Middle Eastern Sweets",
         "☕ Arabic Coffee & Tea"
       ]
