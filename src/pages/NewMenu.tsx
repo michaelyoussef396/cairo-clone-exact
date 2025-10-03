@@ -79,7 +79,7 @@ const NewMenu = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
       <SEO
         title="Egyptian Menu Melbourne | Traditional Halal | Cairo By Nights"
-        description="Traditional Egyptian food menu: Kofta, lamb tagine, koshari, molokhia. Halal certified. Dine-in Carlton Melbourne. View full menu!"
+        description="Traditional Egyptian food menu: Kofta, tagen lamb roz moammar, koshari, molokhia. Halal certified. Dine-in Carlton Melbourne. View full menu!"
         canonical="https://www.caironightsrestaurant.com.au/menu"
       />
       <Header />
@@ -304,9 +304,9 @@ const NewMenu = () => {
               </div>
 
               <div className="bg-muted/50 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Lamb Tagine</h3>
+                <h3 className="text-2xl font-semibold mb-3 text-primary">Tagen Lamb Roz Moammar</h3>
                 <p className="text-muted-foreground leading-relaxed mb-2">
-                  A cornerstone of Egyptian slow-cooking tradition, our lamb tagine is prepared in an authentic clay pot over low heat for hours, allowing the lamb to become impossibly tender while absorbing the complex flavors of dried apricots, sweet prunes, caramelized onions, and a carefully balanced blend of cinnamon, cumin, and coriander. This dish represents the heart of Egyptian home cooking—patient, flavorful, and designed to bring families together. Each tagine is a labor of love that showcases why Egyptian cuisine is celebrated for its depth of flavor and aromatic complexity.
+                  A cornerstone of Egyptian slow-cooking tradition, our tagen lamb roz moammar features slow-baked lamb pieces with onions and cream over Egyptian-style rice, all prepared in an authentic clay pot over low heat for hours. The lamb becomes impossibly tender while absorbing the rich, creamy flavors and traditional spices. This dish represents the heart of Egyptian home cooking—patient, flavorful, and designed to bring families together. Each tagen is a labor of love that showcases why Egyptian cuisine is celebrated for its depth of flavor and aromatic complexity.
                 </p>
                 <p className="text-sm italic text-accent">Recommended pairing: Premium shisha on our outdoor terrace</p>
               </div>

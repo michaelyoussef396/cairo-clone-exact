@@ -20,7 +20,7 @@ const FunctionRoom = () => {
       items: [
         "🥣 Mixed Dips for the Table",
         "🍗 Entree: Chicken Wings & Salads",
-        "🥘 Main: Choice of Lamb Tagine or Chicken Couscous",
+        "🥘 Main: Choice of Tagen Lamb Roz Moammar or Chicken Couscous",
         "🍰 Dessert: Traditional Baklava"
       ]
     },
