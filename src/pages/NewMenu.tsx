@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 import { parseCSV, groupByCategory, categoryOrder, categoryDisplayNames, MenuItem } from '@/utils/csvParser';
+import menuCSV from '@/data/menu.csv?raw';
 
 const NewMenu = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
@@ -16,17 +17,15 @@ const NewMenu = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadMenu = async () => {
+    const loadMenu = () => {
       try {
-        const response = await fetch('/src/data/menu.csv');
-        const csvText = await response.text();
-        const items = parseCSV(csvText);
+        const items = parseCSV(menuCSV);
         const grouped = groupByCategory(items);
-        
+
         setMenuItems(items);
         setGroupedItems(grouped);
         setLoading(false);
-        
+
         // Log validation data
         console.log('Total menu items loaded:', items.length);
         console.log('Items by category:', Object.keys(grouped).map(cat => ({

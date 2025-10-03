@@ -32,7 +32,7 @@ const Location = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Cairo By Nights Location | Lygon Street Carlton Melbourne"
-        description="Find Cairo By Nights at 5/252 Lygon Street, Carlton. Tram 1 & 96. Free parking after 6pm. Near University of Melbourne. Best Egyptian dining Carlton!"
+        description="Find Cairo By Nights at 5/252 Lygon Street, Carlton. Tram 1 & 96. Free parking Sunday all day, Mon-Sat after 7pm. Near University of Melbourne. Best Egyptian dining Carlton!"
         canonical="https://www.caironightsrestaurant.com.au/location"
       />
       <Helmet>
@@ -208,11 +208,11 @@ const Location = () => {
               <div className="text-4xl mb-4">🆓</div>
               <h3 className="font-playfair font-semibold text-xl mb-4 text-primary">Free Parking Times</h3>
               <div className="space-y-3 text-muted-foreground">
-                <p><strong className="text-foreground">Weekdays:</strong> Free after 6:00pm</p>
-                <p><strong className="text-foreground">Saturdays:</strong> Free after 12:30pm</p>
-                <p><strong className="text-foreground">Sundays:</strong> Free all day</p>
+                <p><strong className="text-foreground">Sunday:</strong> Free all day</p>
+                <p><strong className="text-foreground">Monday-Saturday:</strong> Free after 7:00pm</p>
+                <p><strong className="text-foreground">Before 7pm:</strong> Metered parking available</p>
                 <p className="text-sm italic text-accent">
-                  Perfect timing for dinner! Arrive after 6pm weekdays for free street parking.
+                  Perfect timing for dinner! Arrive after 7pm weekdays or anytime Sunday for free street parking.
                 </p>
               </div>
             </div>
@@ -434,7 +434,7 @@ const Location = () => {
               <ParkingCircle className="h-8 w-8 text-primary mb-4" />
               <h3 className="font-playfair font-semibold text-lg mb-3 text-primary">Parking Strategy</h3>
               <p className="text-muted-foreground text-sm">
-                Arrive after 6pm for free street parking—perfect timing for dinner reservations. Check side streets (Faraday, Drummond) for better availability.
+                Arrive after 7pm for free street parking—perfect timing for dinner reservations. Sunday parking is free all day. Check side streets (Faraday, Drummond) for better availability.
               </p>
             </div>
 

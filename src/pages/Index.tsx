@@ -224,7 +224,7 @@ const Index = () => {
               <div className="bg-muted/50 p-6 rounded-lg">
                 <h3 className="text-xl font-playfair font-semibold mb-4 text-primary">Perfect Carlton Location</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Conveniently located on iconic Lygon Street in Carlton, we're easily accessible by tram (routes 1 & 96), with free street parking after 6 PM on weekdays. Just 2 minutes from the University of Melbourne and 10 minutes from Carlton Gardens, our location makes us the perfect choice for students, locals, and visitors. Plus, with extended hours until 1 AM on weekends, we're Carlton's premier destination for late-night Egyptian dining.
+                  Conveniently located on iconic Lygon Street in Carlton, we're easily accessible by tram (routes 1 & 96), with free street parking Sunday all day and after 7 PM weekdays. Just 2 minutes from the University of Melbourne and 10 minutes from Carlton Gardens, our location makes us the perfect choice for students, locals, and visitors. Plus, with extended hours until 1 AM on weekends, we're Carlton's premier destination for late-night Egyptian dining.
                 </p>
               </div>
             </div>
@@ -283,9 +283,9 @@ const Index = () => {
                 </div>
                 <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">Free Parking</h3>
                 <p className="text-muted-foreground">
-                  Free street parking after 6pm weekdays<br/>
-                  Free after 12:30pm Saturdays<br/>
-                  Free all day Sundays
+                  Sunday: Free all day<br/>
+                  Monday-Saturday: Free after 7pm<br/>
+                  Metered parking available before 7pm
                 </p>
               </div>
             </div>

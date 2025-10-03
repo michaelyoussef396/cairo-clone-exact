@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { parseCSV, groupByCategory, categoryOrder, categoryDisplayNames, MenuItem } from '@/utils/csvParser';
+import menuCSV from '@/data/menu.csv?raw';
 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState<Record<string, MenuItem[]>>({});
@@ -13,11 +14,9 @@ const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState('Entree');
 
   useEffect(() => {
-    const loadMenuData = async () => {
+    const loadMenuData = () => {
       try {
-        const response = await fetch('/src/data/menu.csv');
-        const csvText = await response.text();
-        const items = parseCSV(csvText);
+        const items = parseCSV(menuCSV);
         const groupedItems = groupByCategory(items);
         setMenuItems(groupedItems);
         setLoading(false);
