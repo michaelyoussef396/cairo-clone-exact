@@ -320,10 +320,9 @@ const Events = () => {
                       </div>
                     </li>
                     <li className="flex items-start gap-3">
-                      <span className="text-accent text-xl">🌿</span>
+                      <span className="text-accent text-xl">💙</span>
                       <div>
-                        <span className="font-semibold text-foreground">Mint Infusion</span> - Cool, refreshing mint
-                        perfect for those seeking a crisp, invigorating shisha session
+                        <span className="font-semibold text-foreground">Lady in Blue</span> - House special mix of Lady Killer, Love 66, and Blueberry - our signature blend
                       </div>
                     </li>
                     <li className="flex items-start gap-3">

@@ -262,30 +262,30 @@ const AboutUs = () => {
 
       {/* Stats Section with Background */}
       <section className="relative py-20">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${barDrinks})` }}
         >
           <div className="absolute inset-0 bg-black/80" />
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto section-padding">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">8+</div>
-              <div className="text-sm uppercase tracking-widest text-primary font-semibold">EVENTS MONTHLY</div>
+            <div className="bg-card border border-border p-6 rounded-lg text-center">
+              <div className="text-4xl font-bold egyptian-gold mb-2">8+</div>
+              <div className="text-muted-foreground">Events Monthly</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-primary mb-2">5</div>
-              <div className="text-sm uppercase tracking-widest text-primary font-semibold">EXPERT CHEFS</div>
+            <div className="bg-card border border-border p-6 rounded-lg text-center">
+              <div className="text-4xl font-bold egyptian-gold mb-2">5</div>
+              <div className="text-muted-foreground">Expert Chefs</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">5000+</div>
-              <div className="text-sm uppercase tracking-widest text-white font-semibold">SERVED CUSTOMERS</div>
+            <div className="bg-card border border-border p-6 rounded-lg text-center">
+              <div className="text-4xl font-bold egyptian-gold mb-2">5000+</div>
+              <div className="text-muted-foreground">Served Customers</div>
             </div>
-            <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-white mb-2">15000+</div>
-              <div className="text-sm uppercase tracking-widest text-white font-semibold">SERVED DISHES</div>
+            <div className="bg-card border border-border p-6 rounded-lg text-center">
+              <div className="text-4xl font-bold egyptian-gold mb-2">15000+</div>
+              <div className="text-muted-foreground">Served Dishes</div>
             </div>
           </div>
         </div>
@@ -446,7 +446,7 @@ const AboutUs = () => {
                 Weekend Entertainment
               </h3>
               <p className="text-muted-foreground">
-                Live belly dancing every Fri-Sun at 9PM, plus Arabic music and premium shisha.
+                Live belly dancing Friday, Saturday, Sunday at 9PM. Live Arabic music Friday & Sunday at 8PM. Premium shisha lounge.
               </p>
             </a>
 

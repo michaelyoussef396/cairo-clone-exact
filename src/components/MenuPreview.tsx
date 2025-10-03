@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import entreeImage from '@/assets/entree.webp';
 import mainDish1 from '@/assets/main-dish-1.webp';
 import mainDish2 from '@/assets/main-dish-2.webp';
@@ -9,24 +10,28 @@ import shishaServed from '@/assets/shisha.webp';
 export const MenuPreview = () => {
   const menuCategories = [
     {
-      title: 'Entree',
+      title: 'Entrees',
       image: entreeImage,
-      alt: 'Entree image'
+      alt: 'Entree image',
+      link: '/menu'
     },
     {
-      title: 'Main Dish',
+      title: 'Main Dishes',
       image: mainDish1,
-      alt: 'Main dish image'
+      alt: 'Main dish image',
+      link: '/menu'
     },
     {
-      title: 'Main Dish',
+      title: 'Grills',
       image: mainDish2,
-      alt: 'Main dish image'
+      alt: 'Grill dishes image',
+      link: '/menu'
     },
     {
-      title: 'Beverages',
+      title: 'Drinks',
       image: beveragesImage,
-      alt: 'Beverages image'
+      alt: 'Beverages and drinks image',
+      link: '/menu'
     }
   ];
 
@@ -96,9 +101,10 @@ export const MenuPreview = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {menuCategories.map((category, index) => (
-            <div
+            <Link
               key={index}
-              className="group cursor-pointer"
+              to={category.link}
+              className="group cursor-pointer block"
             >
               <div className="relative overflow-hidden rounded-lg aspect-square mb-4">
                 <img
@@ -120,7 +126,7 @@ export const MenuPreview = () => {
               <h4 className="font-playfair text-xl font-semibold text-center egyptian-gold">
                 {category.title}
               </h4>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
