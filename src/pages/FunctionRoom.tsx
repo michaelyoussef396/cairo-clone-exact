@@ -1,12 +1,16 @@
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import fullTable from '@/assets/full-table.jpg';
-import restaurantInterior from '@/assets/restaurant-interior.jpg';
-import happyGuests from '@/assets/happy-guests.jpg';
-import egyptianDishes from '@/assets/egyptian-dishes.jpg';
-import mainDish1 from '@/assets/main-dish-1.jpg';
-import mainDish2 from '@/assets/main-dish-2.jpg';
+import { SEO } from '@/components/SEO';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { Helmet } from 'react-helmet-async';
+import fullTable from '@/assets/full-table.webp';
+import restaurantInterior from '@/assets/restaurant-interior.webp';
+import happyGuests from '@/assets/happy-guests.webp';
+import egyptianDishes from '@/assets/egyptian-dishes.webp';
+import mainDish1 from '@/assets/main-dish-1.webp';
+import mainDish2 from '@/assets/main-dish-2.webp';
 
 const FunctionRoom = () => {
   const banquetPackages = [
@@ -46,45 +50,52 @@ const FunctionRoom = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Function Room Carlton | Private Events | Cairo By Nights"
+        description="Private function room hire Carlton. Birthday parties, corporate events, engagements. Banquet packages from $55pp. Book your event now!"
+        canonical="https://www.caironightsrestaurant.com.au/function-room"
+        ogImage="/images/og-function-room.webp"
+      />
+      <Helmet>
+        <link rel="preload" as="image" href={fullTable} />
+        <link rel="preload" as="image" href={restaurantInterior} />
+        <link rel="preload" as="image" href={egyptianDishes} />
+      </Helmet>
       <Header />
-      
+      <Breadcrumbs />
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image Grid */}
-        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+        <div className="absolute inset-0 grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
           <div className="relative">
             <img
               src={fullTable}
-              alt="Function room setup"
+              alt="Private function room setup at Cairo By Nights Carlton - Perfect for birthday parties and corporate events"
+              width={600}
+              height={400}
               className="w-full h-full object-cover rounded-lg"
+              loading="eager"
             />
           </div>
           <div className="relative">
             <img
               src={restaurantInterior}
-              alt="Restaurant interior"
+              alt="Cairo By Nights function room interior Carlton - Authentic Egyptian decor and private event space"
+              width={600}
+              height={400}
               className="w-full h-full object-cover rounded-lg"
+              loading="eager"
             />
           </div>
           <div className="relative">
-            <img
-              src={happyGuests}
-              alt="Happy guests dining"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative md:col-span-2">
             <img
               src={egyptianDishes}
-              alt="Egyptian cuisine spread"
+              alt="Traditional Egyptian cuisine spread at Cairo By Nights - Halal banquet packages from $55pp"
+              width={800}
+              height={600}
               className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
-          <div className="relative">
-            <img
-              src={mainDish1}
-              alt="Main dish presentation"
-              className="w-full h-full object-cover rounded-lg"
+              loading="eager"
             />
           </div>
         </div>
@@ -95,7 +106,7 @@ const FunctionRoom = () => {
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center section-padding">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-playfair font-bold mb-6 egyptian-gold">
-            Host Unforgettable Events at Cairo By Nights
+            Function Room Hire Carlton | Private Events at Cairo By Nights
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
             Our function room in Carlton offers an immersive Egyptian experience, ideal for birthdays, 
@@ -145,18 +156,27 @@ const FunctionRoom = () => {
             <div className="grid grid-cols-2 gap-4">
               <img
                 src={mainDish2}
-                alt="Elegant dining setup"
+                alt="Elegant Egyptian dining setup at Cairo By Nights - Premium banquet service"
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover rounded-lg"
+                loading="lazy"
               />
               <img
                 src={restaurantInterior}
-                alt="Restaurant ambiance"
+                alt="Authentic Middle Eastern restaurant ambiance - Cairo By Nights Carlton venue"
+                width={400}
+                height={300}
                 className="w-full h-48 object-cover rounded-lg"
+                loading="lazy"
               />
               <img
                 src={egyptianDishes}
-                alt="Traditional dishes"
+                alt="Traditional Egyptian dishes - Authentic halal cuisine at Cairo By Nights Melbourne"
+                width={800}
+                height={600}
                 className="w-full h-48 object-cover rounded-lg col-span-2"
+                loading="lazy"
               />
             </div>
           </div>
@@ -227,6 +247,18 @@ const FunctionRoom = () => {
               <p className="text-muted-foreground">Birthdays, corporate dinners, engagements, and more</p>
             </div>
           </div>
+
+          <p className="text-muted-foreground mb-4 text-center mt-8 max-w-3xl mx-auto">
+            Enhance your event with{" "}
+            <Link to="/events" className="text-egyptian-gold hover:underline">
+              live belly dancing performances
+            </Link>{" "}
+            every Friday, Saturday, and Sunday. View our full{" "}
+            <Link to="/menu#banquet" className="text-egyptian-gold hover:underline">
+              banquet menu options
+            </Link>{" "}
+            to customize your celebration menu.
+          </p>
         </div>
       </section>
 
@@ -237,7 +269,7 @@ const FunctionRoom = () => {
             Ready to Plan Your Event?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your private event requirements and create an unforgettable 
+            Contact us today to discuss your private event requirements and create an unforgettable
             Egyptian dining experience for you and your guests.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

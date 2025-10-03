@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import barDrinks from '@/assets/bar-drinks.jpg';
-import egyptFlag from '@/assets/egypt-flag.jpg';
+import { Helmet } from 'react-helmet-async';
+import barDrinks from '@/assets/bar-drinks.webp';
+import egyptFlag from '@/assets/egypt-flag.webp';
 
 export const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -21,19 +22,41 @@ export const FAQSection = () => {
     }
   ];
 
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   const toggleFAQ = (index: number) => {
     setOpenFAQ(openFAQ === index ? null : index);
   };
 
   return (
     <section className="section-padding">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         {/* Bar Image */}
         <div className="mb-16">
           <img
             src={barDrinks}
-            alt="Drinks displayed at the bar"
+            alt="Premium drinks and cocktails at Cairo By Nights bar - Egyptian restaurant Carlton Melbourne"
+            width={800}
+            height={600}
             className="w-full h-64 md:h-80 object-cover rounded-lg shadow-dark"
+            loading="lazy"
           />
         </div>
 
@@ -91,8 +114,11 @@ export const FAQSection = () => {
           <div className="space-y-6">
             <img
               src={egyptFlag}
-              alt="Flag of Egypt"
+              alt="Egyptian flag - Authentic Egyptian restaurant Cairo By Nights Carlton Melbourne"
+              width={800}
+              height={600}
               className="w-full aspect-video object-cover rounded-lg shadow-dark"
+              loading="lazy"
             />
           </div>
         </div>

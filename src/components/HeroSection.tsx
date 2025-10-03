@@ -1,34 +1,21 @@
 import { ChevronDown } from 'lucide-react';
-import egyptianDishes from '@/assets/egyptian-dishes.jpg';
-import restaurantInterior from '@/assets/restaurant-interior.jpg';
-import bellyDancer from '@/assets/belly-dancer.jpg';
+import egyptianDishes from '@/assets/egyptian-dishes.webp';
+import restaurantInterior from '@/assets/restaurant-interior.webp';
+import bellyDancer from '@/assets/belly-dancer.webp';
 
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background Images Grid */}
-      <div className="absolute inset-0 grid grid-cols-3 gap-1">
-        <div className="relative">
-          <img
-            src={egyptianDishes}
-            alt="Mix of Egyptian main dishes"
-            className="w-full h-screen object-cover opacity-40"
-          />
-        </div>
-        <div className="relative">
-          <img
-            src={restaurantInterior}
-            alt="Photo of the restaurant"
-            className="w-full h-screen object-cover opacity-40"
-          />
-        </div>
-        <div className="relative">
-          <img
-            src={bellyDancer}
-            alt="Belly dancer dancing in the restaurant"
-            className="w-full h-screen object-cover opacity-40"
-          />
-        </div>
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src={egyptianDishes}
+          alt="Authentic Egyptian cuisine at Cairo By Nights Carlton - Mixed grill, kofta, and traditional Middle Eastern dishes"
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover"
+          loading="eager"
+        />
       </div>
 
       {/* Dark Overlay */}
@@ -43,8 +30,8 @@ export const HeroSection = () => {
               <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="egyptian-gold">Authentic</span><br />
                 <span className="egyptian-gold">Egyptian</span><br />
-                Dining in<br />
-                Melbourne
+                Restaurant in<br />
+                Carlton, Melbourne
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
@@ -62,6 +49,12 @@ export const HeroSection = () => {
               >
                 Book Your Experience
                 <span className="text-xl">🍽️</span>
+              </a>
+              <a
+                href="/menu"
+                className="reserve-button flex items-center justify-center gap-2"
+              >
+                View Menu
               </a>
             </div>
 

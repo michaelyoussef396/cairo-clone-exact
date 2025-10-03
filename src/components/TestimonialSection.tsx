@@ -1,8 +1,42 @@
-import happyGuests from '@/assets/happy-guests.jpg';
+import happyGuests from '@/assets/happy-guests.webp';
+import { Helmet } from 'react-helmet-async';
 
 export const TestimonialSection = () => {
+  // Review Schema for SEO
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "Restaurant",
+      "name": "Cairo By Nights Restaurant & Bar",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5/252 Lygon Street",
+        "addressLocality": "Carlton",
+        "addressRegion": "VIC",
+        "postalCode": "3053",
+        "addressCountry": "AU"
+      }
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Krystalia T"
+    },
+    "reviewBody": "Had such a fantastic night at Cairo By Nights. Food was delicious and we went on a Saturday night and there was a beautiful lady doing belly dancing which really added to the atmosphere. The music was great as well. Thank you Sonny, I'll definitely be back again!"
+  };
+
   return (
     <section className="section-padding bg-gradient-dark">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(reviewSchema)}
+        </script>
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         {/* What Our Customer Says - Original Layout */}
         <div className="mb-12">
@@ -39,7 +73,10 @@ export const TestimonialSection = () => {
               <img
                 src={happyGuests}
                 alt="Happy guests enjoying live belly dancing performance at Cairo By Nights Carlton"
+                width={800}
+                height={600}
                 className="w-full aspect-video object-cover rounded-lg shadow-dark"
+                loading="lazy"
               />
             </div>
           </div>
@@ -49,7 +86,7 @@ export const TestimonialSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <a
-              href="#"
+              href="/about-us"
               className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-300 font-medium"
             >
               Check Our Story →

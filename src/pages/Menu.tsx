@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
@@ -31,6 +32,37 @@ const Menu = () => {
 
   const availableCategories = categoryOrder.filter(category => menuItems[category]?.length > 0);
 
+  // Generate Menu Schema for SEO
+  const menuSections = availableCategories.map(category => ({
+    "@type": "MenuSection",
+    "name": categoryDisplayNames[category] || category,
+    "hasMenuItem": menuItems[category]?.map(item => {
+      const priceValue = item.price ? parseFloat(item.price.replace('$', '')) : null;
+      return {
+        "@type": "MenuItem",
+        "name": item.title.replace(/\$\d+\s*/, '').trim(),
+        "description": item.shortDescription,
+        "image": item.image,
+        ...(priceValue && {
+          "offers": {
+            "@type": "Offer",
+            "price": priceValue,
+            "priceCurrency": "AUD"
+          }
+        })
+      };
+    }) || []
+  }));
+
+  const menuSchema = {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Cairo By Nights Menu",
+    "description": "Authentic Egyptian and Middle Eastern cuisine featuring traditional dishes, grills, desserts, and premium beverages",
+    "inLanguage": "en-AU",
+    "hasMenuSection": menuSections
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-background">
@@ -48,8 +80,13 @@ const Menu = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(menuSchema)}
+        </script>
+      </Helmet>
       <Header />
-      
+
       {/* Hero Section */}
       <section className="relative h-[60vh] flex items-center justify-center bg-gradient-to-br from-primary/20 via-background to-secondary/20">
         <div className="absolute inset-0 bg-black/40"></div>

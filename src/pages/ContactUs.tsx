@@ -1,8 +1,12 @@
 import { MapPin, Clock, Phone, Mail, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import restaurantInterior from '@/assets/restaurant-interior.jpg';
-import egyptianDishes from '@/assets/egyptian-dishes.jpg';
+import { SEO } from '@/components/SEO';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { Helmet } from 'react-helmet-async';
+import restaurantInterior from '@/assets/restaurant-interior.webp';
+import egyptianDishes from '@/assets/egyptian-dishes.webp';
 
 const ContactUs = () => {
   const contactInfo = {
@@ -17,16 +21,28 @@ const ContactUs = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <SEO
+        title="Contact Cairo By Nights | Lygon St Carlton | 03 9654 1005"
+        description="Cairo By Nights: 5/252 Lygon Street, Carlton 3053. Ph: 03 9654 1005. Open Sun-Thu 5pm-12am, Fri-Sat 5pm-1am. Reserve online!"
+        canonical="https://www.caironightsrestaurant.com.au/contact-us"
+      />
+      <Helmet>
+        <link rel="preload" as="image" href={restaurantInterior} />
+      </Helmet>
       <Header />
-      
+      <Breadcrumbs />
+
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src={restaurantInterior}
-            alt="Cairo By Nights Restaurant Interior"
+            alt="Cairo By Nights Egyptian Restaurant Interior - 5/252 Lygon Street Carlton Melbourne"
+            width={1920}
+            height={1080}
             className="w-full h-full object-cover"
+            loading="eager"
           />
         </div>
 
@@ -125,14 +141,29 @@ const ContactUs = () => {
                   </div>
                 </div>
               </div>
+
+              <p className="text-muted-foreground mb-4">
+                Open 7 days a week with{" "}
+                <Link to="/events" className="text-egyptian-gold hover:underline">
+                  live belly dancing entertainment
+                </Link>{" "}
+                every Friday, Saturday, and Sunday from 9PM. View our{" "}
+                <Link to="/menu" className="text-egyptian-gold hover:underline">
+                  full menu
+                </Link>{" "}
+                online.
+              </p>
             </div>
 
             {/* Image */}
             <div className="relative">
               <img
                 src={egyptianDishes}
-                alt="Egyptian cuisine at Cairo Nights"
+                alt="Authentic Egyptian cuisine at Cairo By Nights Carlton - Halal restaurant Lygon Street Melbourne"
+                width={800}
+                height={600}
                 className="w-full h-full object-cover rounded-lg shadow-lg"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
             </div>
@@ -211,8 +242,8 @@ const ContactUs = () => {
             <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4 egyptian-gold">
               Find Us in Carlton
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Located on bustling Lygon Street, we're easily accessible by public transport and car.
+            <p className="text-lg text-muted-foreground mb-4">
+              Located on bustling Lygon Street, we're easily accessible by public transport and car. First time visiting Carlton? <a href="/location" className="text-primary hover:text-accent underline">Check our location guide</a> for parking tips, tram routes, and nearby attractions.
             </p>
           </div>
           
@@ -287,7 +318,7 @@ const ContactUs = () => {
                 href="/function-room"
                 className="reserve-button inline-block"
               >
-                Learn More
+                View Function Room Details
               </a>
             </div>
           </div>
@@ -302,18 +333,20 @@ const ContactUs = () => {
               What Our Guests Say
             </h2>
             <div className="flex items-center justify-center gap-2 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
-              ))}
+              <div className="flex" role="img" aria-label="Rated 4.8 out of 5 stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" aria-hidden="true" />
+                ))}
+              </div>
               <span className="text-muted-foreground ml-2">4.8/5 on Google Reviews</span>
             </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="testimonial-card p-6">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4" role="img" aria-label="Rated 5 out of 5 stars">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" aria-hidden="true" />
                 ))}
               </div>
               <p className="text-muted-foreground mb-4 italic">
@@ -324,9 +357,9 @@ const ContactUs = () => {
             </div>
 
             <div className="testimonial-card p-6">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4" role="img" aria-label="Rated 5 out of 5 stars">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" aria-hidden="true" />
                 ))}
               </div>
               <p className="text-muted-foreground mb-4 italic">
@@ -337,9 +370,9 @@ const ContactUs = () => {
             </div>
 
             <div className="testimonial-card p-6">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-4" role="img" aria-label="Rated 5 out of 5 stars">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" aria-hidden="true" />
                 ))}
               </div>
               <p className="text-muted-foreground mb-4 italic">
@@ -348,6 +381,52 @@ const ContactUs = () => {
               <div className="font-semibold text-primary">Ahmed R.</div>
               <div className="text-sm text-muted-foreground">Google Review</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore More Section - Internal Links */}
+      <section className="section-padding">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4 egyptian-gold">
+              Explore More
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Discover everything Cairo By Nights has to offer
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <a href="/menu" className="group testimonial-card p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">🍽️</div>
+              <h3 className="font-playfair font-semibold text-xl mb-2 text-primary group-hover:text-accent transition-colors">
+                Our Menu
+              </h3>
+              <p className="text-muted-foreground">
+                Explore our authentic Egyptian dishes, from traditional tagines to premium grills and desserts.
+              </p>
+            </a>
+
+            <a href="/events" className="group testimonial-card p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">💃</div>
+              <h3 className="font-playfair font-semibold text-xl mb-2 text-primary group-hover:text-accent transition-colors">
+                Live Events
+              </h3>
+              <p className="text-muted-foreground">
+                Experience belly dancing shows, live Arabic music, and our premium shisha lounge every weekend.
+              </p>
+            </a>
+
+            <a href="/function-room" className="group testimonial-card p-6 hover:scale-105 transition-all duration-300">
+              <div className="text-4xl mb-4">🎉</div>
+              <h3 className="font-playfair font-semibold text-xl mb-2 text-primary group-hover:text-accent transition-colors">
+                Private Events
+              </h3>
+              <p className="text-muted-foreground">
+                Host your birthday, corporate event, or celebration with our exclusive banquet packages.
+              </p>
+            </a>
           </div>
         </div>
       </section>

@@ -17,7 +17,8 @@ export const Footer = () => {
     { name: 'Menu', href: '/menu' },
     { name: 'Events', href: '/events' },
     { name: 'Function Room', href: '/function-room' },
-    { name: 'Contact Us', href: '/contact-us' }
+    { name: 'Contact Us', href: '/contact-us' },
+    { name: 'Visit Us in Carlton', href: '/location' }
   ];
 
 
