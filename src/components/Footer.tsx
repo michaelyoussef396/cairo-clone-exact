@@ -111,7 +111,7 @@ export const Footer = () => {
         <div className="border-t border-primary/20 pt-8 mb-8">
           <div className="text-center">
             <a
-              href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+              href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
               className="reserve-button inline-block"
               target="_blank"
               rel="noopener noreferrer"

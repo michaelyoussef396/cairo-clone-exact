@@ -248,7 +248,7 @@ const AboutUs = () => {
               </div>
               
               <a
-                href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+                href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
                 className="inline-block px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-black transition-colors duration-300 font-semibold tracking-wider"
                 target="_blank"
                 rel="noopener noreferrer"

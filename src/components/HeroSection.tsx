@@ -84,7 +84,7 @@ export const HeroSection = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+                href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
                 className="hero-button flex items-center justify-center gap-2"
                 target="_blank"
                 rel="noopener noreferrer"

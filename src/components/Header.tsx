@@ -46,7 +46,7 @@ export const Header = () => {
           {/* Reserve Now Button */}
           <div className="hidden lg:block">
             <a
-              href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+              href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
               className="reserve-button"
               target="_blank"
               rel="noopener noreferrer"
@@ -87,7 +87,7 @@ export const Header = () => {
                 </a>
               ))}
               <a
-                href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+                href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
                 className="block reserve-button text-center mt-4"
                 target="_blank"
                 rel="noopener noreferrer"

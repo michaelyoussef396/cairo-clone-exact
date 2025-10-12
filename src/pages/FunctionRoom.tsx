@@ -115,7 +115,7 @@ const FunctionRoom = () => {
             the perfect venue for a memorable event.
           </p>
           <a
-            href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+            href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
             className="hero-button inline-block"
             target="_blank"
             rel="noopener noreferrer"
@@ -145,7 +145,7 @@ const FunctionRoom = () => {
                 detail to deliver elegance, flavour, and unforgettable atmosphere.
               </p>
               <a
-                href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+                href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
                 className="reserve-button inline-block"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -274,7 +274,7 @@ const FunctionRoom = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+              href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
               className="hero-button"
               target="_blank"
               rel="noopener noreferrer"

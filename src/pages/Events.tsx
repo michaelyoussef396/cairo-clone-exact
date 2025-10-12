@@ -78,7 +78,7 @@ const Events = () => {
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
-          "url": "https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+          "url": "https://cairo-by-nights-restaurant-bar.resos.com/booking"
         }
       },
       {
@@ -96,7 +96,7 @@ const Events = () => {
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
-          "url": "https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+          "url": "https://cairo-by-nights-restaurant-bar.resos.com/booking"
         }
       },
       {
@@ -114,7 +114,7 @@ const Events = () => {
         "offers": {
           "@type": "Offer",
           "availability": "https://schema.org/InStock",
-          "url": "https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+          "url": "https://cairo-by-nights-restaurant-bar.resos.com/booking"
         }
       }
     ]

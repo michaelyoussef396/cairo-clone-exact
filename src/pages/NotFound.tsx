@@ -65,7 +65,7 @@ const NotFound = () => {
           </div>
 
           <a
-            href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+            href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
             className="hero-button inline-block"
             target="_blank"
             rel="noopener noreferrer"

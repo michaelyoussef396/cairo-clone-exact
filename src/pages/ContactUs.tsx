@@ -283,7 +283,7 @@ const ContactUs = () => {
               <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">Online Booking</h3>
               <p className="text-muted-foreground mb-4">Reserve your table instantly through our online booking system.</p>
               <a
-                href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
+                href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
                 className="reserve-button inline-block"
                 target="_blank"
                 rel="noopener noreferrer"
