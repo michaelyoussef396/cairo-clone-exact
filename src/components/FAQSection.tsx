@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import barDrinks from '@/assets/bar-drinks.webp';
 import egyptFlag from '@/assets/egypt-flag.webp';
 
 export const FAQSection = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   const faqs = [
     {
@@ -41,7 +44,7 @@ export const FAQSection = () => {
   };
 
   return (
-    <section className="section-padding">
+    <section ref={ref} className="section-padding">
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
@@ -72,7 +75,17 @@ export const FAQSection = () => {
 
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="testimonial-card">
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: [0.22, 1, 0.36, 1]
+                  }}
+                  className="testimonial-card"
+                >
                   <button
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between text-left"
@@ -80,21 +93,32 @@ export const FAQSection = () => {
                     <span className="font-semibold text-foreground pr-4">
                       {faq.question}
                     </span>
-                    {openFAQ === index ? (
-                      <ChevronUp className="h-5 w-5 text-primary flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="h-5 w-5 text-primary flex-shrink-0" />
-                    )}
+                    <motion.div
+                      animate={{ rotate: openFAQ === index ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {openFAQ === index ? (
+                        <ChevronUp className="h-5 w-5 text-primary flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="h-5 w-5 text-primary flex-shrink-0" />
+                      )}
+                    </motion.div>
                   </button>
                   
                   {openFAQ === index && (
-                    <div className="mt-4 pt-4 border-t border-primary/20">
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="mt-4 pt-4 border-t border-primary/20"
+                    >
                       <p className="text-muted-foreground leading-relaxed">
                         {faq.answer}
                       </p>
-                    </div>
+                    </motion.div>
                   )}
-                </div>
+                </motion.div>
               ))}
             </div>
 

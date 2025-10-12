@@ -20,12 +20,17 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
-// Loading fallback component for Suspense
+// Enhanced loading fallback component with Egyptian theme
 const LoadingFallback = () => (
   <div className="min-h-screen flex items-center justify-center bg-background">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-      <p className="text-muted-foreground">Loading...</p>
+    <div className="text-center space-y-4">
+      <div className="relative">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-primary mx-auto"></div>
+        <div className="animate-pulse absolute inset-0 flex items-center justify-center">
+          <span className="text-2xl">✨</span>
+        </div>
+      </div>
+      <p className="text-muted-foreground font-playfair animate-pulse">Preparing your experience...</p>
     </div>
   </div>
 );

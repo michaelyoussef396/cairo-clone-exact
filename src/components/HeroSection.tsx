@@ -1,11 +1,10 @@
 import { ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import egyptianDishes from '@/assets/egyptian-dishes.webp';
-import restaurantInterior from '@/assets/restaurant-interior.webp';
-import bellyDancer from '@/assets/belly-dancer.webp';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden scroll-smooth">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -25,23 +24,66 @@ export const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Left Side - Text Content */}
-          <div className="space-y-8">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="space-y-8"
+          >
             <div className="space-y-6">
-              <h1 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                <span className="egyptian-gold">Authentic</span><br />
-                <span className="egyptian-gold">Egyptian</span><br />
-                Restaurant in<br />
-                Carlton, Melbourne
-              </h1>
+              <motion.h1 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+              >
+                <motion.span 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.4 }}
+                  className="egyptian-gold inline-block"
+                >
+                  Authentic
+                </motion.span><br />
+                <motion.span 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 }}
+                  className="egyptian-gold inline-block"
+                >
+                  Egyptian
+                </motion.span><br />
+                <motion.span
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.6 }}
+                  className="inline-block"
+                >
+                  Restaurant in<br />
+                  Carlton, Melbourne
+                </motion.span>
+              </motion.h1>
               
-              <p className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed">
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="text-lg md:text-xl text-muted-foreground max-w-lg leading-relaxed"
+              >
                 Experience the magic of Cairo By Nights with authentic Egyptian cuisine, live 
                 belly dancing, Arabic music, and premium shisha in the heart of Carlton.
-              </p>
+              </motion.p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="flex flex-col sm:flex-row gap-4"
+            >
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href="https://bookings.wowapps.com/make-booking/caironightsrestauran?src=web"
                 className="hero-button flex items-center justify-center gap-2"
                 target="_blank"
@@ -49,40 +91,73 @@ export const HeroSection = () => {
               >
                 Book Your Experience
                 <span className="text-xl">🍽️</span>
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 href="/menu"
                 className="reserve-button flex items-center justify-center gap-2"
               >
                 View Menu
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
-            <div className="pt-8">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 1.1 }}
+              className="pt-8"
+            >
               <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <span className="egyptian-gold text-2xl font-bold">5000+</span>
+                <motion.span 
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                  className="egyptian-gold text-2xl font-bold"
+                >
+                  5000+
+                </motion.span>
                 <span>Happy Customers across Melbourne</span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Side - Additional Visual Element */}
-          <div className="hidden lg:block">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="hidden lg:block"
+          >
             <div className="text-center space-y-4">
-              <div className="egyptian-gold text-6xl font-playfair font-bold">
+              <motion.div 
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1, delay: 0.6 }}
+                className="egyptian-gold text-6xl font-playfair font-bold"
+              >
                 Loved by Melbourne
-              </div>
-              <div className="text-primary text-2xl font-playfair">
+              </motion.div>
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="text-primary text-2xl font-playfair"
+              >
                 Foodies & Shisha Lovers
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Scroll Down Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1.5, repeat: Infinity, repeatType: 'reverse' }}
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        >
           <ChevronDown className="h-8 w-8 text-primary" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

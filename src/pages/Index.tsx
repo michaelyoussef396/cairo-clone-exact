@@ -6,11 +6,10 @@ import { TestimonialSection } from '@/components/TestimonialSection';
 import { FAQSection } from '@/components/FAQSection';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
+import { ScrollProgress } from '@/components/ScrollProgress';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import egyptianDishes from '@/assets/egyptian-dishes.webp';
-import restaurantInterior from '@/assets/restaurant-interior.webp';
-import bellyDancer from '@/assets/belly-dancer.webp';
 
 const Index = () => {
   const websiteSchema = {
@@ -124,7 +123,8 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background scroll-smooth">
+      <ScrollProgress />
       <SEO
         title="Egyptian Restaurant Carlton | Cairo By Nights Lygon St"
         description="Best Egyptian restaurant in Carlton, Melbourne. Authentic halal cuisine, live belly dancing, shisha lounge. 5/252 Lygon Street. Book now! ⭐ 4.8/5"
@@ -147,7 +147,7 @@ const Index = () => {
         {/* Welcome Section */}
         <section className="section-padding bg-background">
           <div className="max-w-6xl mx-auto">
-            <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6 egyptian-gold">
                 Welcome to Cairo By Nights
               </h2>
@@ -190,7 +190,7 @@ const Index = () => {
         {/* Why Choose Us Section */}
         <section className="section-padding bg-secondary/20">
           <div className="max-w-6xl mx-auto">
-            <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6 egyptian-gold">
                 Why Choose Cairo By Nights
               </h2>
@@ -243,7 +243,7 @@ const Index = () => {
         {/* Visit Us Section */}
         <section className="section-padding bg-background">
           <div className="max-w-6xl mx-auto">
-            <div className="max-w-4xl mx-auto text-center mb-12">
+            <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in">
               <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-6 egyptian-gold">
                 Visit Us in Carlton
               </h2>

@@ -1,5 +1,8 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useRef } from 'react';
 import entreeImage from '@/assets/entree.webp';
 import mainDish1 from '@/assets/main-dish-1.webp';
 import mainDish2 from '@/assets/main-dish-2.webp';
@@ -8,6 +11,8 @@ import fullTable from '@/assets/full-table.webp';
 import shishaServed from '@/assets/shisha.webp';
 
 export const MenuPreview = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
   const menuCategories = [
     {
       title: 'Entrees',
@@ -36,7 +41,7 @@ export const MenuPreview = () => {
   ];
 
   return (
-    <section id="menu" className="section-padding">
+    <section ref={ref} id="menu" className="section-padding">
       <div className="max-w-7xl mx-auto">
         {/* Dine, Unwind, and Experience Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -101,32 +106,46 @@ export const MenuPreview = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {menuCategories.map((category, index) => (
-            <Link
+            <motion.div
               key={index}
-              to={category.link}
-              className="group cursor-pointer block"
+              initial={{ opacity: 0, y: 40 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: [0.22, 1, 0.36, 1]
+              }}
             >
-              <div className="relative overflow-hidden rounded-lg aspect-square mb-4">
-                <img
-                  src={category.image}
-                  alt={category.alt}
-                  width={400}
-                  height={400}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex items-center gap-2 text-primary font-medium">
-                    {category.title}
-                    <ArrowRight className="h-4 w-4" />
+              <Link
+                to={category.link}
+                className="group cursor-pointer block"
+              >
+                <motion.div 
+                  className="relative overflow-hidden rounded-lg aspect-square mb-4"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <img
+                    src={category.image}
+                    alt={category.alt}
+                    width={400}
+                    height={400}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="flex items-center gap-2 text-primary font-medium">
+                      {category.title}
+                      <ArrowRight className="h-4 w-4" />
+                    </div>
                   </div>
-                </div>
-              </div>
-              <h4 className="font-playfair text-xl font-semibold text-center egyptian-gold">
-                {category.title}
-              </h4>
-            </Link>
+                </motion.div>
+                <h4 className="font-playfair text-xl font-semibold text-center egyptian-gold">
+                  {category.title}
+                </h4>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
