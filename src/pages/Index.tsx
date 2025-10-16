@@ -57,13 +57,13 @@ const Index = () => {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
         "opens": "17:00",
-        "closes": "00:00"
+        "closes": "23:30"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Friday", "Saturday"],
         "opens": "17:00",
-        "closes": "01:00"
+        "closes": "00:30"
       }
     ],
     "aggregateRating": {

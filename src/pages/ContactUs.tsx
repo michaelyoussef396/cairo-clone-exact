@@ -14,8 +14,8 @@ const ContactUs = () => {
     phone: "03 9654 1005", 
     email: "contactus@cairobynightsrestaurant.com.au",
     hours: {
-      weekdays: "Sunday – Thursday: 5:00pm – 12:00am",
-      weekends: "Friday & Saturday: 5:00pm – 01:00am"
+      weekdays: "Sunday – Thursday: 5:00pm – 11:30pm",
+      weekends: "Friday & Saturday: 5:00pm – 12:30am"
     }
   };
 
