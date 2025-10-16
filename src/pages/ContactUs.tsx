@@ -12,7 +12,7 @@ const ContactUs = () => {
   const contactInfo = {
     address: "5/252 Lygon Street, Carlton 3053",
     phone: "03 9654 1005", 
-    email: "info@caironightsrestaurant.com.au",
+    email: "contactus@cairobynightsrestaurant.com.au",
     hours: {
       weekdays: "Sunday – Thursday: 5:00pm – 12:00am",
       weekends: "Friday & Saturday: 5:00pm – 01:00am"

@@ -127,10 +127,10 @@ export const FAQSection = () => {
                 Still have any questions?
               </p>
               <a
-                href="mailto:info@caironightsrestaurant.com.au"
+                href="mailto:contactus@cairobynightsrestaurant.com.au"
                 className="text-primary hover:text-accent transition-colors duration-300 font-medium"
               >
-                info@caironightsrestaurant.com.au
+                contactus@cairobynightsrestaurant.com.au
               </a>
             </div>
           </div>

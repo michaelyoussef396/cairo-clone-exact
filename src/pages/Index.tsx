@@ -50,7 +50,7 @@ const Index = () => {
       "longitude": "144.9672"
     },
     "telephone": "+61396541005",
-    "email": "info@caironightsrestaurant.com.au",
+    "email": "contactus@cairobynightsrestaurant.com.au",
     "url": "https://www.caironightsrestaurant.com.au",
     "openingHoursSpecification": [
       {
