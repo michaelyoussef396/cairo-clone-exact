@@ -17,25 +17,25 @@ export const MenuPreview = () => {
     {
       title: 'Entrees',
       image: entreeImage,
-      alt: 'Entree image',
+      alt: 'Traditional Egyptian entrees at Cairo Nights restaurant Carlton Melbourne',
       link: '/menu'
     },
     {
       title: 'Main Dishes',
       image: mainDish1,
-      alt: 'Main dish image',
+      alt: 'Authentic Egyptian main dishes - Cairo Nights halal cuisine Melbourne',
       link: '/menu'
     },
     {
       title: 'Grills',
       image: mainDish2,
-      alt: 'Grill dishes image',
+      alt: 'Charcoal grilled Egyptian meats at Cairo By Nights Carlton',
       link: '/menu'
     },
     {
       title: 'Drinks',
       image: beveragesImage,
-      alt: 'Beverages and drinks image',
+      alt: 'Traditional Egyptian beverages and drinks at Cairo Nights',
       link: '/menu'
     }
   ];

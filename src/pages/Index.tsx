@@ -7,6 +7,7 @@ import { FAQSection } from '@/components/FAQSection';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
 import { ScrollProgress } from '@/components/ScrollProgress';
+import { faqSchema } from '@/components/FAQSchema';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import egyptianDishes from '@/assets/egyptian-dishes.webp';
@@ -31,6 +32,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": ["Restaurant", "LocalBusiness"],
     "name": "Cairo By Nights Restaurant & Bar",
+    "alternateName": ["Cairo Nights", "Cairo Nights Restaurant", "Cairo By Nights Carlton", "Cairo Nights Melbourne"],
     "description": "Authentic halal Egyptian restaurant in Carlton Melbourne featuring live belly dancing, premium shisha lounge, and traditional Middle Eastern cuisine. Experience the magic of Cairo on Lygon Street.",
     "image": "https://www.caironightsrestaurant.com.au/images/hero.jpg",
     "servesCuisine": ["Egyptian", "Middle Eastern", "Mediterranean", "Halal"],
@@ -139,6 +141,9 @@ const Index = () => {
         <script type="application/ld+json">
           {JSON.stringify(restaurantSchema)}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
       </Helmet>
       <Header />
       <main>
@@ -152,7 +157,7 @@ const Index = () => {
                 Welcome to Cairo By Nights
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Melbourne's Premier Egyptian Restaurant Experience
+                Known locally as Cairo Nights, we're Melbourne's Premier Egyptian Restaurant Experience
               </p>
             </div>
 
