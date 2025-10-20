@@ -17,13 +17,13 @@ export const MenuPreview = () => {
     {
       title: 'Entrees',
       image: entreeImage,
-      alt: 'Traditional Egyptian entrees at Cairo Nights restaurant Carlton Melbourne',
+      alt: 'Traditional Egyptian entrees at Cairo By Nights restaurant Carlton Melbourne',
       link: '/menu'
     },
     {
       title: 'Main Dishes',
       image: mainDish1,
-      alt: 'Authentic Egyptian main dishes - Cairo Nights halal cuisine Melbourne',
+      alt: 'Authentic Egyptian main dishes - Cairo By Nights halal cuisine Melbourne',
       link: '/menu'
     },
     {
@@ -35,7 +35,7 @@ export const MenuPreview = () => {
     {
       title: 'Drinks',
       image: beveragesImage,
-      alt: 'Traditional Egyptian beverages and drinks at Cairo Nights',
+      alt: 'Traditional Egyptian beverages and drinks at Cairo By Nights',
       link: '/menu'
     }
   ];

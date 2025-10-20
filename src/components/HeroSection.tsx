@@ -9,7 +9,7 @@ export const HeroSection = () => {
       <div className="absolute inset-0">
         <img
           src={egyptianDishes}
-          alt="Authentic Egyptian cuisine at Cairo Nights Carlton - Mixed grill, kofta, and traditional Middle Eastern dishes"
+          alt="Authentic Egyptian cuisine at Cairo By Nights Carlton - Mixed grill, kofta, and traditional Middle Eastern dishes"
           width={1920}
           height={1080}
           className="w-full h-full object-cover"

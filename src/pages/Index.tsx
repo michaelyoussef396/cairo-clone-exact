@@ -32,7 +32,7 @@ const Index = () => {
     "@context": "https://schema.org",
     "@type": ["Restaurant", "LocalBusiness"],
     "name": "Cairo By Nights Restaurant & Bar",
-    "alternateName": ["Cairo Nights", "Cairo Nights Restaurant", "Cairo By Nights Carlton", "Cairo Nights Melbourne"],
+    "alternateName": ["Cairo By Nights Restaurant", "Cairo By Nights Carlton", "Cairo By Nights Melbourne"],
     "description": "Authentic halal Egyptian restaurant in Carlton Melbourne featuring live belly dancing, premium shisha lounge, and traditional Middle Eastern cuisine. Experience the magic of Cairo on Lygon Street.",
     "image": "https://www.caironightsrestaurant.com.au/images/hero.jpg",
     "servesCuisine": ["Egyptian", "Middle Eastern", "Mediterranean", "Halal"],
@@ -157,7 +157,7 @@ const Index = () => {
                 Welcome to Cairo By Nights
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Known locally as Cairo Nights, we're Melbourne's Premier Egyptian Restaurant Experience
+                Melbourne's Premier Egyptian Restaurant Experience
               </p>
             </div>
 

@@ -91,7 +91,7 @@ const Menu = () => {
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="relative z-10 text-center text-white px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 egyptian-gold">
-            Cairo Nights Menu - Authentic Egyptian Cuisine
+            Cairo By Nights Menu - Authentic Egyptian Cuisine
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
             Discover the authentic flavors of Egypt with our carefully crafted dishes,
