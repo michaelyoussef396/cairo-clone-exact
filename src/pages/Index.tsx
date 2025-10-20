@@ -179,7 +179,7 @@ const Index = () => {
               </p>
 
               <p>
-                Whether you're celebrating a romantic dinner for two, gathering with family and friends, hosting a corporate event in our private function room, or simply craving authentic halal Egyptian cuisine, Cairo By Nights welcomes you with the warm hospitality Egypt is famous for. Our extended hours—open until midnight Sunday through Thursday and 1 AM on weekends—make us Carlton's go-to destination for late-night dining and entertainment.
+                Whether you're celebrating a romantic dinner for two, gathering with family and friends, hosting a corporate event in our private function room, or simply craving authentic halal Egyptian cuisine, Cairo By Nights welcomes you with the warm hospitality Egypt is famous for. Our extended hours—open until 11:30 PM Sunday through Thursday and 12:30 AM on weekends—make us Carlton's go-to destination for late-night dining and entertainment.
               </p>
 
               <p>
