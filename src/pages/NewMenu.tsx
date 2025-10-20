@@ -170,52 +170,63 @@ const NewMenu = () => {
       </section>
 
       {/* Banquet Options */}
-      <section className="section-padding">
+      <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 egyptian-gold">
               Banquet Packages
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Perfect for groups and special occasions. All packages include bread, tea or coffee.
-              Minimum 8 people. 48-hour advance booking required.
+            <div className="w-32 h-1 bg-gradient-gold mx-auto rounded-full mb-6"></div>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Perfect for groups and special occasions. Minimum 8 people. 48-hour advance booking required.
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-6"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
             {banquetOptions.map((option, index) => (
-              <Card key={index} className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-                <CardHeader className="text-center">
-                  <CardTitle className="text-2xl text-primary">{option.title}</CardTitle>
-                  <Badge variant="outline" className="mx-auto text-lg px-4 py-2">{option.price}</Badge>
-                </CardHeader>
-                <CardContent>
+              <div 
+                key={index} 
+                className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+              >
+                {/* Decorative corner accent */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-gold opacity-10 rounded-bl-full"></div>
+                
+                <div className="text-center mb-8 relative z-10">
+                  <div className="text-2xl md:text-3xl font-bold egyptian-gold mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {option.title}
+                  </div>
+                  <p className="text-muted-foreground font-medium text-lg mb-4">{option.price}</p>
+                </div>
+                
+                <div className="relative z-10">
                   <p className="text-muted-foreground leading-relaxed">{option.description}</p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-6 text-muted-foreground">
-            <div className="bg-primary/5 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-primary">Perfect for Every Occasion</h3>
+          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 text-muted-foreground">
+            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="text-4xl mb-4 text-center">🎉</div>
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-primary text-center">Perfect for Every Occasion</h3>
               <p className="leading-relaxed">
-                Our banquet packages are ideal for birthday celebrations, corporate dinners, engagement parties, family reunions, and any special gathering. Each tier offers generous portions designed in the Egyptian tradition of communal feasting, where sharing food strengthens bonds and creates lasting memories. Groups of 10 to 50+ guests can experience the joy of authentic Egyptian hospitality.
+                Our banquet packages are ideal for birthday celebrations, corporate dinners, engagement parties, family reunions, and any special gathering. Each tier offers generous portions designed in the Egyptian tradition of communal feasting.
               </p>
             </div>
 
-            <div className="bg-secondary/5 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-primary">Customization & Entertainment</h3>
+            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="text-4xl mb-4 text-center">🎭</div>
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-primary text-center">Customization & Entertainment</h3>
               <p className="leading-relaxed">
-                We understand that every celebration is unique. Our banquet packages can be customized to accommodate dietary requirements including vegetarian options, gluten-free needs, and specific spice preferences. Enhance your event with our professional belly dancing performance (available Friday-Sunday at 9 PM) for an unforgettable Egyptian entertainment experience that transports your guests to the heart of Cairo's vibrant nightlife.
+                We understand that every celebration is unique. Our banquet packages can be customized to accommodate dietary requirements. Enhance your event with our professional belly dancing performance available Friday-Sunday at 9 PM.
               </p>
             </div>
 
-            <div className="bg-accent/5 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3 text-primary">Egyptian Feast Tradition</h3>
+            <div className="bg-card/50 backdrop-blur-sm p-8 rounded-2xl border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="text-4xl mb-4 text-center">🏺</div>
+              <h3 className="text-xl font-playfair font-semibold mb-4 text-primary text-center">Egyptian Feast Tradition</h3>
               <p className="leading-relaxed">
-                The Egyptian tradition of communal feasting dates back thousands of years. Our banquet service embraces this heritage, presenting dishes family-style to encourage sharing, conversation, and togetherness—core values of Egyptian hospitality. From the moment your mezze selection arrives to the final bites of our traditional desserts, your group will experience dining as it's meant to be enjoyed: surrounded by friends, laughter, and the warm ambiance of Cairo By Nights.
+                The Egyptian tradition of communal feasting dates back thousands of years. Our banquet service embraces this heritage, presenting dishes family-style to encourage sharing, conversation, and togetherness.
               </p>
             </div>
 

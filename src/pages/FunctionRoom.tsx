@@ -196,34 +196,63 @@ const FunctionRoom = () => {
       </section>
 
       {/* Banquet Packages Section */}
-      <section className="section-padding">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4 egyptian-gold">
+      <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-playfair font-bold mb-6 egyptian-gold">
               Banquet Packages
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-32 h-1 bg-gradient-gold mx-auto rounded-full mb-6"></div>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Curated dining experiences for every celebration, ideal for birthdays, engagements, and group bookings.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {banquetPackages.map((pkg, index) => (
-              <div key={index} className="testimonial-card p-6 h-full">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold egyptian-gold mb-2">{pkg.price}</div>
-                  <p className="text-muted-foreground">{pkg.title}</p>
+              <div 
+                key={index} 
+                className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+              >
+                {/* Decorative corner accent */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-gold opacity-10 rounded-bl-full"></div>
+                
+                <div className="text-center mb-8 relative z-10">
+                  <div className="text-4xl md:text-5xl font-bold egyptian-gold mb-3 group-hover:scale-110 transition-transform duration-300">
+                    {pkg.price}
+                  </div>
+                  <p className="text-muted-foreground font-medium text-lg">{pkg.title}</p>
                 </div>
-                <div className="space-y-3">
+                
+                <div className="space-y-4">
                   {pkg.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-start gap-3">
-                      <span className="text-lg">{item.split(' ')[0]}</span>
-                      <span className="text-muted-foreground">{item.substring(item.indexOf(' ') + 1)}</span>
+                    <div 
+                      key={itemIndex} 
+                      className="flex items-start gap-3 p-2 rounded-lg hover:bg-primary/5 transition-colors duration-300"
+                      style={{ animationDelay: `${itemIndex * 0.1}s` }}
+                    >
+                      <span className="text-2xl flex-shrink-0 group-hover:scale-125 transition-transform duration-300">
+                        {item.split(' ')[0]}
+                      </span>
+                      <span className="text-muted-foreground leading-relaxed">
+                        {item.substring(item.indexOf(' ') + 1)}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
+              className="hero-button inline-block group-hover:scale-110 transition-transform duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Your Banquet
+            </a>
           </div>
         </div>
       </section>
