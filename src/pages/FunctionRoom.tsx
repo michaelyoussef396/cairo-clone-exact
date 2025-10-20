@@ -20,30 +20,42 @@ const FunctionRoom = () => {
       items: [
         "🥣 Mixed Dips for the Table",
         "🍗 Entree: Chicken Wings & Salads",
-        "🥘 Main: Choice of Tagen Lamb Roz Moammar or Molokhia with Chicken",
-        "🍰 Dessert: Traditional Baklava"
+        "🍖 Main: Mixed Grill",
+        "🌱 Vegan/Vegetarian: Koshari substitution"
       ]
     },
     {
-      price: "$65pp",
-      title: "A complete culinary journey.",
+      price: "$60pp",
+      title: "A step up with extra flavour and dessert to finish.",
       items: [
-        "🥣 Mixed Dips & Bread Selection",
-        "🍤 Entree: Grilled Prawns & Mixed Salads",
-        "🥘 Main: Lamb Shank Fattah or Chicken Shish Kebab with Rice",
-        "🍰 Dessert: Assorted Middle Eastern Sweets",
-        "☕ Arabic Coffee & Tea"
+        "🥣 Mixed Dips for the Table",
+        "🍗 Entree: Chicken Wings, Lamb Sambousek & Salad",
+        "🍖 Main: Mixed Grill",
+        "🍰 Dessert: Baklava Selection",
+        "🌱 Vegan/Vegetarian: Koshari substitution"
       ]
     },
     {
-      price: "$75pp",
-      title: "The ultimate Egyptian feast.",
+      price: "$70pp",
+      title: "For those who want it all.",
       items: [
-        "🥣 Premium Mezze Platter",
-        "🦐 Entree: Seafood Selection & Gourmet Salads",
-        "🥩 Main: Mixed Grill (Lamb, Chicken, Kofta) with Traditional Sides",
-        "🍰 Dessert: Premium Dessert Selection",
-        "🍷 Welcome Drink & Arabic Coffee Service"
+        "🥣 Mixed Dips for the Table",
+        "🍤 Entree: Chicken Wings, Cheese Sambousek, Salad, Fried Calamari & Kobeba",
+        "🍖 Main: Mix Grill & Samakmak (baked fish)",
+        "🍰 Dessert: Om Ali",
+        "🌱 Vegan/Vegetarian: Koshari substitution"
+      ]
+    },
+    {
+      price: "$80pp",
+      title: "Premium banquet with everything included.",
+      items: [
+        "🥣 Mixed Dips for the Table",
+        "🍗 Entree: Chicken Wings, Sambousek & Salad",
+        "🍖 Main: Grilled Seafood, Mix Grill, & Macarona Bechamel",
+        "🍰 Desserts: Baklava, Om Ali",
+        "☕ Tea or Coffee included",
+        "🌱 Vegan/Vegetarian: Koshari substitution"
       ]
     }
   ];
@@ -195,7 +207,7 @@ const FunctionRoom = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {banquetPackages.map((pkg, index) => (
               <div key={index} className="testimonial-card p-6 h-full">
                 <div className="text-center mb-6">

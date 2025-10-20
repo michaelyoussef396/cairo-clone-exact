@@ -59,19 +59,24 @@ const NewMenu = () => {
 
   const banquetOptions = [
     {
-      title: "Package A",
-      price: "$55 per person",
-      description: "Selection of 3 dips, hummus, babaganoush, garlic dip, mixed grill (lamb kofta, chicken skewer), cairo rice, salad, dessert"
+      title: "$55pp Banquet",
+      price: "Simple, authentic, and satisfying.",
+      description: "🥣 Mixed Dips for the Table | 🍗 Entree: Chicken Wings & Salads | 🍖 Main: Mixed Grill | 🌱 Vegan/Vegetarian: Koshari substitution"
     },
     {
-      title: "Package B", 
-      price: "$65 per person",
-      description: "Selection of 3 dips, mixed entrees (sambousek, chicken wings), mixed grill (lamb kofta, chicken skewer, lamb skewer), cairo rice, salad, dessert"
+      title: "$60pp Banquet", 
+      price: "A step up with extra flavour and dessert to finish.",
+      description: "🥣 Mixed Dips for the Table | 🍗 Entree: Chicken Wings, Lamb Sambousek & Salad | 🍖 Main: Mixed Grill | 🍰 Dessert: Baklava Selection | 🌱 Vegan/Vegetarian: Koshari substitution"
     },
     {
-      title: "Package C",
-      price: "$75 per person", 
-      description: "Selection of 3 dips, mixed entrees, premium mixed grill (lamb cutlets, chicken skewer, lamb skewer, quail), cairo rice, salad, premium dessert"
+      title: "$70pp Banquet",
+      price: "For those who want it all.", 
+      description: "🥣 Mixed Dips for the Table | 🍤 Entree: Chicken Wings, Cheese Sambousek, Salad, Fried Calamari & Kobeba | 🍖 Main: Mix Grill & Samakmak (baked fish) | 🍰 Dessert: Om Ali | 🌱 Vegan/Vegetarian: Koshari substitution"
+    },
+    {
+      title: "$80pp Banquet",
+      price: "Premium banquet with everything included.", 
+      description: "🥣 Mixed Dips for the Table | 🍗 Entree: Chicken Wings, Sambousek & Salad | 🍖 Main: Grilled Seafood, Mix Grill, & Macarona Bechamel | 🍰 Desserts: Baklava, Om Ali | ☕ Tea or Coffee included | 🌱 Vegan/Vegetarian: Koshari substitution"
     }
   ];
 
