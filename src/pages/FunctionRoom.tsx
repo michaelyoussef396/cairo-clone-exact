@@ -15,47 +15,51 @@ import mainDish2 from '@/assets/main-dish-2.webp';
 const FunctionRoom = () => {
   const banquetPackages = [
     {
-      price: "$55pp",
-      title: "Simple, authentic, and satisfying.",
+      price: "$55",
+      perPerson: "per person",
       items: [
-        "🥣 Mixed Dips for the Table",
-        "🍗 Entree: Chicken Wings & Salads",
-        "🍖 Main: Mixed Grill",
-        "🌱 Vegan/Vegetarian: Koshari substitution"
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wing & Salad" },
+        { label: "Main", value: "Mix Grill" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
       ]
     },
     {
-      price: "$60pp",
-      title: "A step up with extra flavour and dessert to finish.",
+      price: "$60",
+      perPerson: "per person",
       items: [
-        "🥣 Mixed Dips for the Table",
-        "🍗 Entree: Chicken Wings, Lamb Sambousek & Salad",
-        "🍖 Main: Mixed Grill",
-        "🍰 Dessert: Baklava Selection",
-        "🌱 Vegan/Vegetarian: Koshari substitution"
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wings, Lamb Sambousek & Salad" },
+        { label: "Main", value: "Mix Grill" },
+        { label: "Dessert", value: "Selection of Baklava" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
       ]
     },
     {
-      price: "$70pp",
-      title: "For those who want it all.",
+      price: "$70",
+      perPerson: "per person",
       items: [
-        "🥣 Mixed Dips for the Table",
-        "🍤 Entree: Chicken Wings, Cheese Sambousek, Salad, Fried Calamari & Kobeba",
-        "🍖 Main: Mix Grill & Samakmak (baked fish)",
-        "🍰 Dessert: Om Ali",
-        "🌱 Vegan/Vegetarian: Koshari substitution"
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wings, Cheese Sambousek, Salad, Fried Calamari & Kobeba for Table" },
+        { label: "Main", value: "Mix Grill" },
+        { label: "", value: "Samakmak" },
+        { label: "Dessert", value: "Om Ali" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
       ]
     },
     {
-      price: "$80pp",
-      title: "Premium banquet with everything included.",
+      price: "$80",
+      perPerson: "per person",
       items: [
-        "🥣 Mixed Dips for the Table",
-        "🍗 Entree: Chicken Wings, Sambousek & Salad",
-        "🍖 Main: Grilled Seafood, Mix Grill, & Macarona Bechamel",
-        "🍰 Desserts: Baklava, Om Ali",
-        "☕ Tea or Coffee included",
-        "🌱 Vegan/Vegetarian: Koshari substitution"
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wings, Sambousek & Salad" },
+        { label: "Main", value: "Grilled Seafood" },
+        { label: "", value: "Mix Grill" },
+        { label: "", value: "Macarona Bechamel" },
+        { label: "Dessert", value: "Selection of Baklava" },
+        { label: "", value: "Om Ali" },
+        { label: "", value: "Tea or Coffee" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
       ]
     }
   ];
@@ -204,39 +208,46 @@ const FunctionRoom = () => {
             </h2>
             <div className="w-32 h-1 bg-gradient-gold mx-auto rounded-full mb-6"></div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Curated dining experiences for every celebration, ideal for birthdays, engagements, and group bookings.
+              Perfect for groups and special occasions. Minimum 8 people. 48-hour advance booking required.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {banquetPackages.map((pkg, index) => (
               <div 
                 key={index} 
-                className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+                className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
               >
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-gold opacity-10 rounded-bl-full"></div>
                 
-                <div className="text-center mb-8 relative z-10">
-                  <div className="text-4xl md:text-5xl font-bold egyptian-gold mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-center mb-6 md:mb-8 relative z-10">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold egyptian-gold mb-1 group-hover:scale-110 transition-transform duration-300">
                     {pkg.price}
                   </div>
-                  <p className="text-muted-foreground font-medium text-lg">{pkg.title}</p>
+                  <p className="text-muted-foreground font-medium text-sm md:text-base">{pkg.perPerson}</p>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-3 md:space-y-4">
                   {pkg.items.map((item, itemIndex) => (
                     <div 
                       key={itemIndex} 
-                      className="flex items-start gap-3 p-2 rounded-lg hover:bg-primary/5 transition-colors duration-300"
-                      style={{ animationDelay: `${itemIndex * 0.1}s` }}
+                      className="p-2 rounded-lg hover:bg-primary/5 transition-colors duration-300"
                     >
-                      <span className="text-2xl flex-shrink-0 group-hover:scale-125 transition-transform duration-300">
-                        {item.split(' ')[0]}
-                      </span>
-                      <span className="text-muted-foreground leading-relaxed">
-                        {item.substring(item.indexOf(' ') + 1)}
-                      </span>
+                      {item.label && !item.value && (
+                        <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                          {item.label}
+                        </p>
+                      )}
+                      {item.label && item.value && (
+                        <div>
+                          <p className="font-semibold text-primary text-sm md:text-base mb-1">{item.label}:</p>
+                          <p className="text-muted-foreground leading-relaxed text-sm md:text-base pl-2">{item.value}</p>
+                        </div>
+                      )}
+                      {!item.label && item.value && (
+                        <p className="text-muted-foreground leading-relaxed text-sm md:text-base pl-2">{item.value}</p>
+                      )}
                     </div>
                   ))}
                 </div>

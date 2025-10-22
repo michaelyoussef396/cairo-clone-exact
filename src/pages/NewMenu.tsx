@@ -59,24 +59,52 @@ const NewMenu = () => {
 
   const banquetOptions = [
     {
-      title: "$55pp Banquet",
-      price: "Simple, authentic, and satisfying.",
-      description: "🥣 Mixed Dips for the Table | 🍗 Entree: Chicken Wings & Salads | 🍖 Main: Mixed Grill | 🌱 Vegan/Vegetarian: Koshari substitution"
+      price: "$55",
+      perPerson: "per person",
+      items: [
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wing & Salad" },
+        { label: "Main", value: "Mix Grill" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
+      ]
     },
     {
-      title: "$60pp Banquet", 
-      price: "A step up with extra flavour and dessert to finish.",
-      description: "🥣 Mixed Dips for the Table | 🍗 Entree: Chicken Wings, Lamb Sambousek & Salad | 🍖 Main: Mixed Grill | 🍰 Dessert: Baklava Selection | 🌱 Vegan/Vegetarian: Koshari substitution"
+      price: "$60",
+      perPerson: "per person",
+      items: [
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wings, Lamb Sambousek & Salad" },
+        { label: "Main", value: "Mix Grill" },
+        { label: "Dessert", value: "Selection of Baklava" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
+      ]
     },
     {
-      title: "$70pp Banquet",
-      price: "For those who want it all.", 
-      description: "🥣 Mixed Dips for the Table | 🍤 Entree: Chicken Wings, Cheese Sambousek, Salad, Fried Calamari & Kobeba | 🍖 Main: Mix Grill & Samakmak (baked fish) | 🍰 Dessert: Om Ali | 🌱 Vegan/Vegetarian: Koshari substitution"
+      price: "$70",
+      perPerson: "per person",
+      items: [
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wings, Cheese Sambousek, Salad, Fried Calamari & Kobeba for Table" },
+        { label: "Main", value: "Mix Grill" },
+        { label: "", value: "Samakmak" },
+        { label: "Dessert", value: "Om Ali" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
+      ]
     },
     {
-      title: "$80pp Banquet",
-      price: "Premium banquet with everything included.", 
-      description: "🥣 Mixed Dips for the Table | 🍗 Entree: Chicken Wings, Sambousek & Salad | 🍖 Main: Grilled Seafood, Mix Grill, & Macarona Bechamel | 🍰 Desserts: Baklava, Om Ali | ☕ Tea or Coffee included | 🌱 Vegan/Vegetarian: Koshari substitution"
+      price: "$80",
+      perPerson: "per person",
+      items: [
+        { label: "Selection of Mixed Dips for the Table" },
+        { label: "Entree", value: "Chicken Wings, Sambousek & Salad" },
+        { label: "Main", value: "Grilled Seafood" },
+        { label: "", value: "Mix Grill" },
+        { label: "", value: "Macarona Bechamel" },
+        { label: "Dessert", value: "Selection of Baklava" },
+        { label: "", value: "Om Ali" },
+        { label: "", value: "Tea or Coffee" },
+        { label: "(Vegans/vegetarians get their own Koshari)" }
+      ]
     }
   ];
 
@@ -186,20 +214,40 @@ const NewMenu = () => {
             {banquetOptions.map((option, index) => (
               <div 
                 key={index} 
-                className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
+                className="group relative bg-card/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20"
               >
                 {/* Decorative corner accent */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-gold opacity-10 rounded-bl-full"></div>
                 
-                <div className="text-center mb-8 relative z-10">
-                  <div className="text-2xl md:text-3xl font-bold egyptian-gold mb-3 group-hover:scale-110 transition-transform duration-300">
-                    {option.title}
+                <div className="text-center mb-6 md:mb-8 relative z-10">
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold egyptian-gold mb-1 group-hover:scale-110 transition-transform duration-300">
+                    {option.price}
                   </div>
-                  <p className="text-muted-foreground font-medium text-lg mb-4">{option.price}</p>
+                  <p className="text-muted-foreground font-medium text-sm md:text-base">{option.perPerson}</p>
                 </div>
                 
-                <div className="relative z-10">
-                  <p className="text-muted-foreground leading-relaxed">{option.description}</p>
+                <div className="space-y-3 md:space-y-4">
+                  {option.items.map((item, itemIndex) => (
+                    <div 
+                      key={itemIndex} 
+                      className="p-2 rounded-lg hover:bg-primary/5 transition-colors duration-300"
+                    >
+                      {item.label && !item.value && (
+                        <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                          {item.label}
+                        </p>
+                      )}
+                      {item.label && item.value && (
+                        <div>
+                          <p className="font-semibold text-primary text-sm md:text-base mb-1">{item.label}:</p>
+                          <p className="text-muted-foreground leading-relaxed text-sm md:text-base pl-2">{item.value}</p>
+                        </div>
+                      )}
+                      {!item.label && item.value && (
+                        <p className="text-muted-foreground leading-relaxed text-sm md:text-base pl-2">{item.value}</p>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
