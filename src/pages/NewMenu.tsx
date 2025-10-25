@@ -339,10 +339,10 @@ const NewMenu = () => {
             <div className="flex justify-center mb-6">
               <button
                 onClick={() => setActiveCategory('all')}
-                className={`px-8 py-4 rounded-lg font-medium transition-all duration-300 cursor-pointer text-center min-h-[44px] flex items-center justify-center ${
+                className={`px-8 py-4 rounded-lg font-medium transition-all duration-200 cursor-pointer text-center min-h-[44px] flex items-center justify-center border ${
                   activeCategory === 'all'
-                    ? 'bg-[#D4AF37] text-[#1a1a1a] shadow-lg'
-                    : 'bg-[#1a1a1a] text-white hover:bg-[#2a2a2a]'
+                    ? 'bg-[#D4AF37] text-[#1a1a1a] border-[#D4AF37]'
+                    : 'bg-[#2a2a2a] text-[#e5e5e5] border-[rgba(212,175,55,0.3)] hover:bg-[rgba(212,175,55,0.15)] hover:border-[rgba(212,175,55,0.5)]'
                 }`}
               >
                 All Categories
@@ -355,10 +355,10 @@ const NewMenu = () => {
                 <button
                   key={cat.key}
                   onClick={() => setActiveCategory(cat.key)}
-                  className={`px-6 py-4 rounded-lg font-medium transition-all duration-300 cursor-pointer text-center min-h-[44px] flex items-center justify-center ${
+                  className={`px-6 py-4 rounded-lg font-medium transition-all duration-200 cursor-pointer text-center min-h-[44px] flex items-center justify-center border ${
                     activeCategory === cat.key
-                      ? 'bg-[#D4AF37] text-[#1a1a1a] shadow-lg'
-                      : 'bg-[#1a1a1a] text-white hover:bg-[#2a2a2a]'
+                      ? 'bg-[#D4AF37] text-[#1a1a1a] border-[#D4AF37]'
+                      : 'bg-[#2a2a2a] text-[#e5e5e5] border-[rgba(212,175,55,0.3)] hover:bg-[rgba(212,175,55,0.15)] hover:border-[rgba(212,175,55,0.5)]'
                   }`}
                 >
                   {cat.display}
