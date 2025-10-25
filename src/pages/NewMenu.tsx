@@ -202,9 +202,9 @@ const NewMenu = () => {
                 <div className="text-sm text-muted-foreground">Total Items</div>
               </CardContent>
             </Card>
-            <Card className="text-center bg-secondary/5">
+            <Card className="text-center bg-muted/10">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-secondary mb-2">{Object.keys(groupedItems).length}</div>
+                <div className="text-3xl font-bold text-foreground mb-2">{Object.keys(groupedItems).length}</div>
                 <div className="text-sm text-muted-foreground">Categories</div>
               </CardContent>
             </Card>
