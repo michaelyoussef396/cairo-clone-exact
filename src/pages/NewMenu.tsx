@@ -64,7 +64,7 @@ const NewMenu = () => {
     { key: 'Grill', display: 'Grill Selection' },
     { key: 'Tagen', display: 'Traditional Tagen' },
     { key: 'salads', display: 'Fresh Salads' },
-    { key: 'Dips', display: 'Dips & Spreads' },
+    { key: 'Dips', display: 'Dips' },
     { key: 'Sides', display: 'Side Dishes' },
     { key: 'kids', display: 'Kids Menu' },
     { key: 'Desserts', display: 'Sweet Endings' },
