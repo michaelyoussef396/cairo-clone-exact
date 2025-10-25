@@ -378,24 +378,33 @@ const NewMenu = () => {
                     {categoryDisplayNames[category] || category}
                   </h3>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {items.map((item, index) => (
-                      <Card key={index} className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-6">
-                          <div className="flex justify-between items-start mb-3">
-                            <h4 className="font-bold text-lg text-foreground">{item.title.replace(/\$\d+\s*/, '')}</h4>
-                            <Badge className="bg-primary/10 text-primary ml-2 flex-shrink-0">
-                              {item.price || 'Price on request'}
-                            </Badge>
+                  <div className="space-y-8">
+                    {items.map((item, index) => {
+                      // Check if this is a subheading
+                      if (item.shortDescription === 'SUBHEADING') {
+                        return (
+                          <div key={index} className="mt-8 mb-6">
+                            <h4 className="text-2xl font-bold text-[#D4AF37] mb-6" style={{ marginTop: index > 0 ? '24px' : '0', marginBottom: '16px' }}>
+                              {item.title}
+                            </h4>
                           </div>
-                          {item.shortDescription && (
-                            <p className="text-muted-foreground text-sm leading-relaxed">
-                              {item.shortDescription}
-                            </p>
-                          )}
-                        </CardContent>
-                      </Card>
-                    ))}
+                        );
+                      }
+                      
+                      // Regular menu item
+                      return (
+                        <Card key={index} className="bg-card/80 backdrop-blur-sm hover:shadow-lg transition-all duration-300">
+                          <CardContent className="p-6">
+                            <div className="flex justify-between items-start mb-3">
+                              <h4 className="font-bold text-lg text-foreground">{item.title.replace(/\$\d+\s*/, '')}</h4>
+                              <Badge className="bg-primary/10 text-primary ml-2 flex-shrink-0">
+                                {item.price || item.shortDescription || 'Price on request'}
+                              </Badge>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      );
+                    })}
                   </div>
                   
                   <Separator className="my-12" />
