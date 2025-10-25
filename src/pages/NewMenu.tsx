@@ -406,55 +406,6 @@ const NewMenu = () => {
         </div>
       </section>
 
-      {/* Our Signature Dishes */}
-      <section className="section-padding bg-secondary/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
-                Our Signature Dishes
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Discover the Authentic Flavors That Define Cairo By Nights
-              </p>
-            </div>
-
-            <div className="space-y-8">
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Mixed Grill Platter</h3>
-                <p className="text-muted-foreground leading-relaxed mb-2">
-                  Our most popular dish showcases the mastery of Egyptian charcoal grilling. This generous platter features succulent lamb kofta seasoned with our signature seven-spice blend, tender chicken skewers marinated in traditional Egyptian spices, and perfectly grilled lamb chops. Each element is cooked over authentic charcoal to achieve the distinctive smoky flavor that defines Egyptian barbecue. Served with fragrant Cairo rice, fresh salad, and your choice of traditional dips—hummus, baba ganoush, or garlic yogurt. The perfect introduction to Egyptian grilling traditions.
-                </p>
-                <p className="text-sm italic text-accent">Recommended pairing: Traditional mint tea or Arabic coffee</p>
-              </div>
-
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Tagen Lamb Roz Moammar</h3>
-                <p className="text-muted-foreground leading-relaxed mb-2">
-                  A cornerstone of Egyptian slow-cooking tradition, our tagen lamb roz moammar features slow-baked lamb pieces with onions and cream over Egyptian-style rice, all prepared in an authentic clay pot over low heat for hours. The lamb becomes impossibly tender while absorbing the rich, creamy flavors and traditional spices. This dish represents the heart of Egyptian home cooking—patient, flavorful, and designed to bring families together. Each tagen is a labor of love that showcases why Egyptian cuisine is celebrated for its depth of flavor and aromatic complexity.
-                </p>
-                <p className="text-sm italic text-accent">Recommended pairing: Premium shisha on our outdoor terrace</p>
-              </div>
-
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Molokhia</h3>
-                <p className="text-muted-foreground leading-relaxed mb-2">
-                  Known as "the pharaohs' soup," molokhia is Egypt's ancient national dish made from rare molokhia leaves that we import directly from Egypt. This emerald-green soup is prepared with traditional Egyptian garlic-coriander seasoning (taklia) and served with tender chicken or rabbit, Egyptian rice, and fresh pita bread. Dating back over 5,000 years, molokhia represents the continuity of Egyptian culinary tradition from ancient times to modern Carlton. Its unique flavor and velvety texture make it a must-try for anyone seeking an authentic taste of Egypt that few restaurants outside Cairo dare to prepare.
-                </p>
-                <p className="text-sm italic text-accent">Cultural note: A beloved comfort food in every Egyptian home</p>
-              </div>
-
-              <div className="bg-muted/50 p-6 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-3 text-primary">Koshari</h3>
-                <p className="text-muted-foreground leading-relaxed mb-2">
-                  Egypt's unofficial national street food has earned its place on our menu as a tribute to Cairo's vibrant food culture. This vegetarian masterpiece layers perfectly cooked rice, brown lentils, macaroni, and chickpeas, topped with crispy fried onions and spicy tomato sauce with a distinctive Egyptian spice blend. Koshari represents the democratic nature of Egyptian cuisine—beloved by everyone from students to businesspeople, served from street carts to fine restaurants. Our version stays true to the authentic recipe while maintaining the high-quality standards that define Cairo By Nights.
-                </p>
-                <p className="text-sm italic text-accent">Perfect for: Vegetarian guests seeking authentic Egyptian flavors</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Fresh Ingredients Section */}
       <section className="section-padding bg-background">
