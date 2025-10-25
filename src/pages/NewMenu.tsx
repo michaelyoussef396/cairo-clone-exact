@@ -15,6 +15,7 @@ const NewMenu = () => {
   const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
   const [groupedItems, setGroupedItems] = useState<Record<string, MenuItem[]>>({});
   const [loading, setLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState<string | 'all'>('all');
 
   useEffect(() => {
     const loadMenu = () => {
@@ -56,6 +57,32 @@ const NewMenu = () => {
       </div>
     );
   }
+
+  const categoryButtons = [
+    { key: 'Entree', display: 'Entrees' },
+    { key: 'mains', display: 'Main Dishes' },
+    { key: 'Grill', display: 'Grill Selection' },
+    { key: 'Tagen', display: 'Traditional Tagen' },
+    { key: 'salads', display: 'Fresh Salads' },
+    { key: 'Dips', display: 'Dips & Spreads' },
+    { key: 'Sides', display: 'Side Dishes' },
+    { key: 'kids', display: 'Kids Menu' },
+    { key: 'Desserts', display: 'Sweet Endings' },
+    { key: 'Mocktails', display: 'Refreshing Mocktails' },
+    { key: 'Cocktails', display: 'Signature Cocktails' },
+    { key: 'Wines', display: 'Fine Wines' },
+    { key: 'Beers & Ciders', display: 'Beers & Ciders' },
+    { key: 'Hot Drinks', display: 'Hot Beverages' },
+    { key: 'Tea', display: 'Traditional Teas' },
+    { key: 'Cold Drinks', display: 'Cool Refreshments' }
+  ];
+
+  const getFilteredCategories = () => {
+    if (activeCategory === 'all') {
+      return categoryOrder;
+    }
+    return categoryOrder.filter(cat => cat === activeCategory);
+  };
 
   const banquetOptions = [
     {
@@ -306,8 +333,42 @@ const NewMenu = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
           </div>
 
-          <div className="space-y-16">
-            {categoryOrder.map((category) => {
+          {/* Category Navigation */}
+          <div className="mb-16">
+            {/* All Categories Button */}
+            <div className="flex justify-center mb-6">
+              <button
+                onClick={() => setActiveCategory('all')}
+                className={`px-8 py-4 rounded-lg font-medium transition-all duration-300 cursor-pointer text-center min-h-[44px] flex items-center justify-center ${
+                  activeCategory === 'all'
+                    ? 'bg-[#D4AF37] text-[#1a1a1a] shadow-lg'
+                    : 'bg-[#1a1a1a] text-white hover:bg-[#2a2a2a]'
+                }`}
+              >
+                All Categories
+              </button>
+            </div>
+
+            {/* Category Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 max-w-7xl mx-auto">
+              {categoryButtons.map((cat) => (
+                <button
+                  key={cat.key}
+                  onClick={() => setActiveCategory(cat.key)}
+                  className={`px-6 py-4 rounded-lg font-medium transition-all duration-300 cursor-pointer text-center min-h-[44px] flex items-center justify-center ${
+                    activeCategory === cat.key
+                      ? 'bg-[#D4AF37] text-[#1a1a1a] shadow-lg'
+                      : 'bg-[#1a1a1a] text-white hover:bg-[#2a2a2a]'
+                  }`}
+                >
+                  {cat.display}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-16 transition-opacity duration-300">
+            {getFilteredCategories().map((category) => {
               const items = groupedItems[category];
               if (!items || items.length === 0) return null;
 
