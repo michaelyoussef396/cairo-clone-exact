@@ -97,6 +97,6 @@ export const categoryDisplayNames: Record<string, string> = {
   'Wines': 'Fine Wines',
   'Beers & Ciders': 'Beers & Ciders',
   'Hot Drinks': 'Hot Beverages',
-  'Tea': 'Traditional Teas',
+  'Tea': 'Teas',
   'Cold Drinks': 'Cool Refreshments'
 };

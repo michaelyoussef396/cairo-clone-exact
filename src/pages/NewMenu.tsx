@@ -73,7 +73,7 @@ const NewMenu = () => {
     { key: 'Wines', display: 'Fine Wines' },
     { key: 'Beers & Ciders', display: 'Beers & Ciders' },
     { key: 'Hot Drinks', display: 'Hot Beverages' },
-    { key: 'Tea', display: 'Traditional Teas' },
+    { key: 'Tea', display: 'Teas' },
     { key: 'Cold Drinks', display: 'Cool Refreshments' }
   ];
 
