@@ -190,7 +190,7 @@ const NewMenu = () => {
               </p>
 
               <p>
-                The cultural significance of Egyptian communal dining is woven into every aspect of our menu. In Egyptian tradition, meals are shared experiences where family and friends gather around abundant spreads of mezze, grilled meats, and aromatic rice dishes. Our banquet packages ($55-$75pp) embrace this philosophy, designed for groups to experience the joy of Egyptian hospitality through generous portions meant for sharing, conversation, and celebration—just as it has been done in Cairo for centuries.
+                The cultural significance of Egyptian communal dining is woven into every aspect of our menu. In Egyptian tradition, meals are shared experiences where family and friends gather around abundant spreads of mezze, grilled meats, and aromatic rice dishes. Our banquet packages ($60–$80pp) embrace this philosophy, designed for groups to experience the joy of Egyptian hospitality through generous portions meant for sharing, conversation, and celebration—just as it has been done in Cairo for centuries.
               </p>
             </div>
           </div>
