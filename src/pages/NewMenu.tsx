@@ -86,16 +86,6 @@ const NewMenu = () => {
 
   const banquetOptions = [
     {
-      price: "$55",
-      perPerson: "per person",
-      items: [
-        { label: "Selection of Mixed Dips for the Table" },
-        { label: "Entree", value: "Chicken Wing & Salad" },
-        { label: "Main", value: "Mix Grill" },
-        { label: "(Vegans/vegetarians get their own Koshari)" }
-      ]
-    },
-    {
       price: "$60",
       perPerson: "per person",
       items: [
@@ -135,6 +125,9 @@ const NewMenu = () => {
     }
   ];
 
+  // Toggle to true to restore the full menu once new pricing is finalized.
+  const SHOW_MENU = false;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
       <SEO
@@ -145,6 +138,18 @@ const NewMenu = () => {
       <Header />
       <Breadcrumbs />
 
+      {!SHOW_MENU && (
+        <section className="section-padding bg-background flex items-center justify-center min-h-[60vh]">
+          <div className="container mx-auto px-4 text-center max-w-2xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold egyptian-gold mb-6 leading-tight">
+              Our menu is being updated — please check back soon!
+            </h1>
+            <div className="w-24 h-1 bg-gradient-gold mx-auto rounded-full" />
+          </div>
+        </section>
+      )}
+
+      {SHOW_MENU && (<>
       {/* Hero Section */}
       <section className="relative h-[60vh] bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -458,6 +463,8 @@ const NewMenu = () => {
           </Button>
         </div>
       </section>
+
+      </>)}
 
       <Footer />
     </div>
