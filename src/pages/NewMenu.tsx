@@ -34,10 +34,9 @@ const NewMenu = () => {
   const placeholderHeading =
     page?.placeholderHeading || 'Our menu is being updated — please check back soon!';
 
-  const totalItems = categories.reduce(
-    (n, c) => n + c.items.filter((i) => !i.isSubHeading).length,
-    0,
-  );
+  const totalItems = categories.reduce((n, c) => n + c.items.length, 0);
+  const cocktailsCount = categories.find((c) => c.key === 'Cocktails')?.items.length || 0;
+  const mainsCount = categories.find((c) => c.key === 'mains')?.items.length || 0;
   const categoryButtons = categories.map((c) => ({ key: c.key, display: c.displayTitle }));
   const visibleCategories =
     activeCategory === 'all' ? categories : categories.filter((c) => c.key === activeCategory);
@@ -104,6 +103,38 @@ const NewMenu = () => {
               </div>
             </section>
           )}
+
+          {/* Menu Statistics */}
+          <section className="section-padding bg-card/50">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <Card className="text-center bg-primary/5">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-primary mb-2">{totalItems}</div>
+                    <div className="text-sm text-muted-foreground">Total Items</div>
+                  </CardContent>
+                </Card>
+                <Card className="text-center bg-muted/10">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-foreground mb-2">{categories.length}</div>
+                    <div className="text-sm text-muted-foreground">Categories</div>
+                  </CardContent>
+                </Card>
+                <Card className="text-center bg-accent/5">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-accent mb-2">{cocktailsCount}</div>
+                    <div className="text-sm text-muted-foreground">Cocktails</div>
+                  </CardContent>
+                </Card>
+                <Card className="text-center bg-muted/10">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-foreground mb-2">{mainsCount}</div>
+                    <div className="text-sm text-muted-foreground">Main Dishes</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </section>
 
           {/* Banquet Options */}
           <section className="section-padding bg-gradient-to-br from-primary/5 via-background to-secondary/5">
@@ -240,9 +271,6 @@ const NewMenu = () => {
                                   <h4 className="font-bold text-lg text-foreground">{item.name}</h4>
                                   <Badge className="bg-primary/10 text-primary ml-2 flex-shrink-0">{priceBadge(item)}</Badge>
                                 </div>
-                                {item.description && (
-                                  <p className="text-muted-foreground">{item.description}</p>
-                                )}
                               </CardContent>
                             </Card>
                           );
