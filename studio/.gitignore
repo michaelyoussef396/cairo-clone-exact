@@ -3,3 +3,5 @@ dist
 .sanity
 migration/seed.cjs
 migration/seed.mjs
+migration/verify.cjs
+migration/verify.mjs
