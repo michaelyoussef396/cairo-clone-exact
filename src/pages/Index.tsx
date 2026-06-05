@@ -10,6 +10,7 @@ import { ScrollProgress } from '@/components/ScrollProgress';
 import { faqSchema } from '@/components/FAQSchema';
 import { PortableTextContent } from '@/components/PortableTextContent';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import egyptianDishes from '@/assets/egyptian-dishes.webp';
 import { usePage } from '@/hooks/usePage';
 
@@ -92,7 +93,12 @@ const Index = () => {
                 <PortableTextContent value={welcome.body} />
               ) : (
                 <>
-                  <p>Step into Cairo By Nights and experience the magic of authentic Egyptian dining in the heart of Carlton, Melbourne.</p>
+                  <p>Step into Cairo By Nights and experience the magic of authentic Egyptian dining in the heart of Carlton, Melbourne. Since our opening, we've been Melbourne's destination for genuine Egyptian cuisine, bringing centuries-old culinary traditions to Australia's most celebrated dining precinct on Lygon Street.</p>
+                  <p>As a family-owned, halal-certified Egyptian restaurant, we take immense pride in every dish that leaves our kitchen. Our expert Egyptian chefs bring generations of culinary knowledge and traditional cooking techniques, preparing each meal with the same authentic methods used in Cairo's finest restaurants. From our signature slow-cooked tagens to perfectly charcoal-grilled kofta, every dish tells the story of Egypt's rich culinary heritage.</p>
+                  <p>What sets Cairo By Nights apart is our commitment to delivering not just a meal, but a complete Egyptian cultural experience. Beyond our exceptional food, we offer live belly dancing performances every Friday, Saturday, and Sunday night at 9 PM, filling our restaurant with the energy and artistry of traditional Egyptian entertainment. Our premium shisha lounge, featuring an outdoor terrace with views of bustling Lygon Street, provides the perfect setting for relaxed evening gatherings.</p>
+                  <p className="text-muted-foreground mb-4">Experience <Link to="/events" className="text-egyptian-gold hover:underline">live belly dancing</Link> every Friday, Saturday, and Sunday, relax in our premium <Link to="/events#shisha" className="text-egyptian-gold hover:underline">shisha lounge</Link>, or book our <Link to="/function-room" className="text-egyptian-gold hover:underline">private function room</Link> for your next celebration.</p>
+                  <p>Whether you're celebrating a romantic dinner for two, gathering with family and friends, hosting a corporate event in our private function room, or simply craving authentic halal Egyptian cuisine, Cairo By Nights welcomes you with the warm hospitality Egypt is famous for. Our extended hours—open until 11:30 PM Sunday through Thursday and 12:30 AM on weekends—make us Carlton's go-to destination for late-night dining and entertainment.</p>
+                  <p>Located in the heart of Carlton, just moments from the University of Melbourne and Carlton Gardens, we're easily accessible whether you're a local resident, university student, or visitor exploring Melbourne's cultural landmarks. Join the 5,000+ satisfied guests who have discovered why Cairo By Nights is Carlton's favorite Egyptian restaurant.</p>
                 </>
               )}
             </div>
