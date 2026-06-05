@@ -1,11 +1,11 @@
 import { defineType, defineField, defineArrayMember } from 'sanity'
-import { RestaurantIcon } from '@sanity/icons'
+import { BillIcon } from '@sanity/icons'
 
 export const menuItem = defineType({
   name: 'menuItem',
   title: 'Menu item',
   type: 'document',
-  icon: RestaurantIcon,
+  icon: BillIcon,
   fields: [
     defineField({
       name: 'isSubHeading',

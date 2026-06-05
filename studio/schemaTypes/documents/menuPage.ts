@@ -1,5 +1,5 @@
 import { defineType, defineField } from 'sanity'
-import { RestaurantIcon } from '@sanity/icons'
+import { BillIcon } from '@sanity/icons'
 
 /**
  * Editable copy surrounding the menu on /menu (NewMenu.tsx). The menu items
@@ -9,7 +9,7 @@ export const menuPage = defineType({
   name: 'menuPage',
   title: 'Menu page',
   type: 'document',
-  icon: RestaurantIcon,
+  icon: BillIcon,
   groups: [
     { name: 'hero', title: 'Hero', default: true },
     { name: 'traditions', title: 'Culinary traditions' },

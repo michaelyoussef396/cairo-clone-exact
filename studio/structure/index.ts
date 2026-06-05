@@ -3,7 +3,7 @@ import type { ComponentType } from 'react'
 import {
   CogIcon,
   HomeIcon,
-  RestaurantIcon,
+  BillIcon,
   UsersIcon,
   CalendarIcon,
   PinIcon,
@@ -50,13 +50,13 @@ export const structure: StructureResolver = (S) =>
       // Menu
       S.listItem()
         .title('Menu')
-        .icon(RestaurantIcon)
+        .icon(BillIcon)
         .child(
           S.list()
             .title('Menu')
             .items([
               S.documentTypeListItem('menuCategory').title('Categories').icon(TagIcon),
-              S.documentTypeListItem('menuItem').title('Items').icon(RestaurantIcon),
+              S.documentTypeListItem('menuItem').title('Items').icon(BillIcon),
               S.documentTypeListItem('banquetPackage').title('Banquet packages').icon(UsersIcon),
             ]),
         ),
@@ -71,7 +71,7 @@ export const structure: StructureResolver = (S) =>
             .title('Pages')
             .items([
               singleton(S, 'homePage', 'Home', HomeIcon),
-              singleton(S, 'menuPage', 'Menu page', RestaurantIcon),
+              singleton(S, 'menuPage', 'Menu page', BillIcon),
               singleton(S, 'aboutPage', 'About', UsersIcon),
               singleton(S, 'eventsPage', 'Events', CalendarIcon),
               singleton(S, 'locationPage', 'Location', PinIcon),
