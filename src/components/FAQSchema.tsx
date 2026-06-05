@@ -58,7 +58,7 @@ export const faqSchema = {
       "name": "Can I book the function room at Cairo By Nights?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, Cairo By Nights offers a private function room for groups of 20-60 guests, perfect for birthdays, corporate events, and celebrations. We offer halal banquet packages starting from $55 per person, and can arrange belly dancing entertainment for your event. Contact us at 03 9654 1005 or contactus@cairobynightsrestaurant.com.au to discuss your requirements."
+        "text": "Yes, Cairo By Nights offers a private function room for groups of 20-60 guests, perfect for birthdays, corporate events, and celebrations. We offer halal banquet packages starting from $60 per person, and can arrange belly dancing entertainment for your event. Contact us at 03 9654 1005 or contactus@cairobynightsrestaurant.com.au to discuss your requirements."
       }
     },
     {

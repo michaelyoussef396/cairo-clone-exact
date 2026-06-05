@@ -97,7 +97,7 @@ const FunctionRoom = () => {
           <div className="relative">
             <img
               src={egyptianDishes}
-              alt="Traditional Egyptian cuisine spread at Cairo By Nights - Halal banquet packages from $55pp"
+              alt="Traditional Egyptian cuisine spread at Cairo By Nights - Halal banquet packages from $60pp"
               width={800}
               height={600}
               className="w-full h-full object-cover rounded-lg"
