@@ -58,7 +58,7 @@ const FunctionRoom = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SEO
         title="Function Room Carlton | Private Events | Cairo By Nights"
-        description="Private function room hire Carlton. Birthday parties, corporate events, engagements. Banquet packages from $55pp. Book your event now!"
+        description="Private function room hire Carlton. Birthday parties, corporate events, engagements. Banquet packages from $60pp. Book your event now!"
         canonical="https://www.caironightsrestaurant.com.au/function-room"
         ogImage="/images/og-function-room.webp"
       />
@@ -202,7 +202,7 @@ const FunctionRoom = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {banquetPackages.map((pkg, index) => (
               <div 
                 key={index} 
