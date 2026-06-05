@@ -63,7 +63,7 @@ export const locationPage = {
         richBody: pt(
           [
             'Metered parking is available on Lygon Street and surrounding side streets including Faraday Street, Grattan Street, and Drummond Street.',
-            '**Tip:** Side streets like Faraday and Drummond often have better availability than Lygon Street itself!',
+            '**Tip: Side streets like Faraday and Drummond often have better availability than Lygon Street itself!**',
           ].join('\n\n'),
         ),
       },

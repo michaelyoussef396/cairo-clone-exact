@@ -154,7 +154,8 @@ export const eventsPage = {
     heading: 'Ready to Experience the Magic?',
     body: '',
     linkText: pt(
-      'Book your table now and immerse yourself in an authentic Egyptian night. [Planning a special event? Check our function room](/function-room).',
+      // No space before the link — matches the original render ("night.Planning").
+      'Book your table now and immerse yourself in an authentic Egyptian night.[Planning a special event? Check our function room](/function-room).',
     ),
     buttonLabel: 'Reserve Your Table',
   },

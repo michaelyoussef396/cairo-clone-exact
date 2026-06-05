@@ -1,17 +1,20 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { usePage } from '@/hooks/usePage';
+
+const DEFAULT_STATS = [
+  { value: '8+', label: 'EVENTS MONTHLY' },
+  { value: '5', label: 'EXPERT CHEFS' },
+  { value: '5000+', label: 'SERVED CUSTOMERS' },
+  { value: '15000+', label: 'SERVED DISHES' },
+];
 
 export const StatsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-
-  const stats = [
-    { number: '8+', label: 'EVENTS MONTHLY' },
-    { number: '5', label: 'EXPERT CHEFS' },
-    { number: '5000+', label: 'SERVED CUSTOMERS' },
-    { number: '15000+', label: 'SERVED DISHES' }
-  ];
+  const { data: page } = usePage('homePage');
+  const stats = page?.stats?.length ? page.stats : DEFAULT_STATS;
 
   return (
     <section ref={ref} className="section-padding bg-gradient-dark">
@@ -22,33 +25,19 @@ export const StatsSection = () => {
               key={index}
               initial={{ opacity: 0, y: 30, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-                ease: [0.22, 1, 0.36, 1]
-              }}
-              whileHover={{ 
-                scale: 1.05,
-                transition: { duration: 0.2 }
-              }}
+              transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
               className="stats-card cursor-default"
             >
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : {}}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: 0.3 + index * 0.1,
-                  type: "spring",
-                  stiffness: 200
-                }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.1, type: 'spring', stiffness: 200 }}
                 className="egyptian-gold text-3xl lg:text-4xl font-bold font-playfair mb-2"
               >
-                {stat.number}
+                {stat.value}
               </motion.div>
-              <div className="text-muted-foreground text-sm font-inter">
-                {stat.label}
-              </div>
+              <div className="text-muted-foreground text-sm font-inter">{stat.label}</div>
             </motion.div>
           ))}
         </div>
