@@ -23,7 +23,7 @@ const priceBadge = (item: MenuItem) => {
 };
 
 // Toggle to true to restore the full menu once new pricing is finalized.
-const SHOW_MENU = false;
+const SHOW_MENU = true;
 
 const NewMenu = () => {
   const { data: categories = [], isLoading } = useMenu();
