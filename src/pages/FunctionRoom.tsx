@@ -15,16 +15,6 @@ import mainDish2 from '@/assets/main-dish-2.webp';
 const FunctionRoom = () => {
   const banquetPackages = [
     {
-      price: "$55",
-      perPerson: "per person",
-      items: [
-        { label: "Selection of Mixed Dips for the Table" },
-        { label: "Entree", value: "Chicken Wing & Salad" },
-        { label: "Main", value: "Mix Grill" },
-        { label: "(Vegans/vegetarians get their own Koshari)" }
-      ]
-    },
-    {
       price: "$60",
       perPerson: "per person",
       items: [
