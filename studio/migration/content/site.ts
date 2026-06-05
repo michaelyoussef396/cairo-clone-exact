@@ -48,7 +48,7 @@ export const siteSettings = {
     { _key: 'n2', name: 'Menu', href: '/menu' },
     { _key: 'n3', name: 'Events', href: '/events' },
     { _key: 'n4', name: 'Function Room', href: '/function-room' },
-    { _key: 'n5', name: 'Contact US', href: '/contact-us' },
+    { _key: 'n5', name: 'Contact Us', href: '/contact-us' },
   ],
   quickLinks: [
     { _key: 'q1', name: 'About Us', href: '/about-us' },

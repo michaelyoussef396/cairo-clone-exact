@@ -8,7 +8,7 @@ const DEFAULT_NAV = [
   { name: 'Menu', href: '/menu' },
   { name: 'Events', href: '/events' },
   { name: 'Function Room', href: '/function-room' },
-  { name: 'Contact US', href: '/contact-us' },
+  { name: 'Contact Us', href: '/contact-us' },
 ];
 const DEFAULT_RESERVATION = 'https://cairo-by-nights-restaurant-bar.resos.com/booking';
 const DEFAULT_LOGO_ALT = 'Cairo By Nights Restaurant & Bar';
