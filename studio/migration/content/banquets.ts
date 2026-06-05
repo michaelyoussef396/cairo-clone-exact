@@ -1,0 +1,53 @@
+export const banquetPackages = [
+  {
+    _id: 'banquet-60',
+    _type: 'banquetPackage',
+    price: '$60',
+    perPerson: 'per person',
+    order: 0,
+    items: [
+      { _key: 'l1', label: 'Selection of Mixed Dips for the Table' },
+      { _key: 'l2', label: 'Entree', value: 'Chicken Wings, Lamb Sambousek & Salad' },
+      { _key: 'l3', label: 'Main', value: 'Mix Grill' },
+      { _key: 'l4', label: 'Dessert', value: 'Selection of Baklava' },
+      { _key: 'l5', label: '(Vegans/vegetarians get their own Koshari)' },
+    ],
+  },
+  {
+    _id: 'banquet-70',
+    _type: 'banquetPackage',
+    price: '$70',
+    perPerson: 'per person',
+    order: 1,
+    items: [
+      { _key: 'l1', label: 'Selection of Mixed Dips for the Table' },
+      {
+        _key: 'l2',
+        label: 'Entree',
+        value: 'Chicken Wings, Cheese Sambousek, Salad, Fried Calamari & Kobeba for Table',
+      },
+      { _key: 'l3', label: 'Main', value: 'Mix Grill' },
+      { _key: 'l4', label: '', value: 'Samakmak' },
+      { _key: 'l5', label: 'Dessert', value: 'Om Ali' },
+      { _key: 'l6', label: '(Vegans/vegetarians get their own Koshari)' },
+    ],
+  },
+  {
+    _id: 'banquet-80',
+    _type: 'banquetPackage',
+    price: '$80',
+    perPerson: 'per person',
+    order: 2,
+    items: [
+      { _key: 'l1', label: 'Selection of Mixed Dips for the Table' },
+      { _key: 'l2', label: 'Entree', value: 'Chicken Wings, Sambousek & Salad' },
+      { _key: 'l3', label: 'Main', value: 'Grilled Seafood' },
+      { _key: 'l4', label: '', value: 'Mix Grill' },
+      { _key: 'l5', label: '', value: 'Macarona Bechamel' },
+      { _key: 'l6', label: 'Dessert', value: 'Selection of Baklava' },
+      { _key: 'l7', label: '', value: 'Om Ali' },
+      { _key: 'l8', label: '', value: 'Tea or Coffee' },
+      { _key: 'l9', label: '(Vegans/vegetarians get their own Koshari)' },
+    ],
+  },
+]
