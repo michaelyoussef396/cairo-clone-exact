@@ -22,14 +22,15 @@ const priceBadge = (item: MenuItem) => {
   return 'Price on request';
 };
 
-// Toggle to true to restore the full menu once new pricing is finalized.
-const SHOW_MENU = true;
-
 const NewMenu = () => {
   const { data: categories = [], isLoading } = useMenu();
   const { data: banquetOptions = [] } = useBanquets();
   const { data: page } = usePage('menuPage');
   const [activeCategory, setActiveCategory] = useState<string | 'all'>('all');
+
+  // Owner-controlled in Studio (menuPage.menuLive). Defaults to false so a
+  // connectivity/CORS failure shows the placeholder, never a broken empty menu.
+  const menuLive = page?.menuLive === true;
 
   const placeholderHeading =
     page?.placeholderHeading || 'Our menu is being updated — please check back soon!';
@@ -59,7 +60,7 @@ const NewMenu = () => {
       <Header />
       <Breadcrumbs />
 
-      {!SHOW_MENU && (
+      {!menuLive && (
         <section className="section-padding bg-background flex items-center justify-center min-h-[60vh]">
           <div className="container mx-auto px-4 text-center max-w-2xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair font-bold egyptian-gold mb-6 leading-tight">
@@ -70,7 +71,7 @@ const NewMenu = () => {
         </section>
       )}
 
-      {SHOW_MENU && isLoading && (
+      {menuLive && isLoading && (
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto mb-4"></div>
@@ -79,7 +80,7 @@ const NewMenu = () => {
         </div>
       )}
 
-      {SHOW_MENU && !isLoading && (
+      {menuLive && !isLoading && (
         <>
           {/* Hero Section */}
           <section className="relative h-[60vh] bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">

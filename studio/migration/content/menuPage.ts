@@ -16,6 +16,7 @@ const ingredientsBody = [
 export const menuPage = {
   _id: 'menuPage',
   _type: 'menuPage',
+  menuLive: false,
   seo: {
     title: 'Egyptian Menu Melbourne | Traditional Halal | Cairo By Nights',
     description:

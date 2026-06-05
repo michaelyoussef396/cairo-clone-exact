@@ -43,6 +43,20 @@ The left sidebar is grouped to match your site:
 
 ---
 
+## 3b. Making your menu live (or hiding it)
+
+The full menu can be shown or hidden with one switch — handy while you're still finishing prices.
+
+1. Click **Pages → Menu page**.
+2. On the **Menu visibility** tab, find **"Show the full menu"**.
+   - **ON** → visitors see the full menu.
+   - **OFF** → visitors see the *"Our menu is being updated — please check back soon!"* placeholder.
+3. Click **Publish**. The change is live within a few seconds.
+
+> When you're ready to launch the menu, turn **Show the full menu ON** and **Publish**. To take it down again, turn it **OFF** and **Publish**. (If the site ever can't reach the content server, it safely shows the placeholder rather than a blank menu.)
+
+---
+
 ## 4. Editing page text
 
 1. Click **Pages**, then the page you want (e.g. **Home** or **Events**).

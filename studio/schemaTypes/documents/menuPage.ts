@@ -11,7 +11,8 @@ export const menuPage = defineType({
   type: 'document',
   icon: BillIcon,
   groups: [
-    { name: 'hero', title: 'Hero', default: true },
+    { name: 'visibility', title: 'Menu visibility', default: true },
+    { name: 'hero', title: 'Hero' },
     { name: 'traditions', title: 'Culinary traditions' },
     { name: 'banquets', title: 'Banquet intro' },
     { name: 'ingredients', title: 'Fresh ingredients' },
@@ -20,6 +21,16 @@ export const menuPage = defineType({
     { name: 'seo', title: 'SEO' },
   ],
   fields: [
+    defineField({
+      name: 'menuLive',
+      title: 'Show the full menu',
+      type: 'boolean',
+      group: 'visibility',
+      description:
+        "When ON, visitors see the full menu. When OFF, they see the “menu is being updated” placeholder instead. Turn this ON and click Publish when you're ready to go live.",
+      initialValue: false,
+    }),
+
     defineField({ name: 'seo', type: 'seo', group: 'seo' }),
 
     defineField({
