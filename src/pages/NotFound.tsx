@@ -12,7 +12,7 @@ const DEFAULT_LINKS = [
   { name: 'Home', href: '/' },
   { name: 'Menu', href: '/menu' },
   { name: 'Events', href: '/events' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Contact', href: '/contact-us' },
 ];
 
 const NotFound = () => {

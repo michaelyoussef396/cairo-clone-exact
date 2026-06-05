@@ -15,7 +15,7 @@ export const notFoundPage = {
     { _key: 'l1', name: 'Home', href: '/' },
     { _key: 'l2', name: 'Menu', href: '/menu' },
     { _key: 'l3', name: 'Events', href: '/events' },
-    { _key: 'l4', name: 'Contact', href: '/contact' },
+    { _key: 'l4', name: 'Contact', href: '/contact-us' },
   ],
   ctaButtonLabel: 'Make a Reservation',
 }
