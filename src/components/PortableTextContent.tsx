@@ -29,6 +29,7 @@ export const PortableTextContent = ({
     block: {
       normal: ({ children }) =>
         paragraphClassName ? <p className={paragraphClassName}>{children}</p> : <p>{children}</p>,
+      accentNote: ({ children }) => <p className="text-sm italic text-accent">{children}</p>,
     },
     marks: {
       strong: ({ children }) => <strong className={strongClassName}>{children}</strong>,

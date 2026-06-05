@@ -5,6 +5,8 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { Helmet } from 'react-helmet-async';
 import { PortableTextContent } from '@/components/PortableTextContent';
 import { usePage } from '@/hooks/usePage';
+import { useSiteSettings } from '@/hooks/useSiteSettings';
+import { postalAddress } from '@/lib/structuredData';
 import restaurantInterior from '@/assets/restaurant-interior.webp';
 import fullTable from '@/assets/full-table.webp';
 import mainDish1 from '@/assets/main-dish-1.webp';
@@ -12,7 +14,7 @@ import bellyDancer from '@/assets/belly-dancer.webp';
 import happyGuests from '@/assets/happy-guests.webp';
 import barDrinks from '@/assets/bar-drinks.webp';
 import egyptianDishes from '@/assets/egyptian-dishes.webp';
-import { Users, Star } from 'lucide-react';
+import { Users, Star, ChevronDown } from 'lucide-react';
 
 const RESERVATION = 'https://cairo-by-nights-restaurant-bar.resos.com/booking';
 const ACCENT_LINK = 'text-primary hover:text-accent transition-colors duration-300';
@@ -26,6 +28,7 @@ const DEFAULT_STATS = [
 
 const AboutUs = () => {
   const { data: page } = usePage('aboutPage');
+  const { data: site } = useSiteSettings();
   const seo = page?.seo || {};
   const hero = page?.hero || {};
   const roots = page?.roots || {};
@@ -41,7 +44,7 @@ const AboutUs = () => {
     "@type": "Restaurant",
     "name": "Cairo By Nights",
     "url": "https://www.caironightsrestaurant.com.au",
-    "address": { "@type": "PostalAddress", "streetAddress": "5/252 Lygon Street", "addressLocality": "Carlton", "addressRegion": "VIC", "postalCode": "3053", "addressCountry": "AU" },
+    "address": postalAddress(site),
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "3", "bestRating": "5", "worstRating": "5" },
     "review": [
       { "@type": "Review", "author": { "@type": "Person", "name": "Abrar" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "name": "Incredible Food from Start to Dessert", "reviewBody": "Amazing food. Highly recommend the mix grill. Dessert was also great, had the hazelnut egyptian traditional pudding." },
@@ -80,6 +83,9 @@ const AboutUs = () => {
           <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-12 whitespace-pre-line">
             <strong>{hero.description || "Cairo By Nights isn't just a restaurant — it's a cultural journey\nthrough the flavours, music, and soul of Egypt."}</strong>
           </p>
+          <div className="animate-bounce mt-16">
+            <ChevronDown className="w-8 h-8 mx-auto text-white" aria-hidden="true" />
+          </div>
         </div>
       </section>
 

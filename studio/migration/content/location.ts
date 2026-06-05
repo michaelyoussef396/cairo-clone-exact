@@ -1,4 +1,4 @@
-import { pt } from '../lib/pt'
+import { pt, ptBlock } from '../lib/pt'
 import { img } from './site'
 
 const RESERVATION = 'https://cairo-by-nights-restaurant-bar.resos.com/booking'
@@ -71,14 +71,19 @@ export const locationPage = {
         _key: 'pk2',
         emoji: '🆓',
         title: 'Free Parking Times',
-        richBody: pt(
-          [
-            '**Sunday:** Free all day',
-            '**Monday-Saturday:** Free after 7:00pm',
-            '**Before 7pm:** Metered parking available',
+        richBody: [
+          ...pt(
+            [
+              '**Sunday:** Free all day',
+              '**Monday-Saturday:** Free after 7:00pm',
+              '**Before 7pm:** Metered parking available',
+            ].join('\n\n'),
+          ),
+          ptBlock(
             'Perfect timing for dinner! Arrive after 7pm weekdays or anytime Sunday for free street parking.',
-          ].join('\n\n'),
-        ),
+            'accentNote',
+          ),
+        ],
       },
       {
         _key: 'pk3',

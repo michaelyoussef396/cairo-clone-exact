@@ -18,6 +18,7 @@ export const richText = defineType({
         { title: 'Heading 3', value: 'h3' },
         { title: 'Heading 4', value: 'h4' },
         { title: 'Quote', value: 'blockquote' },
+        { title: 'Accent note', value: 'accentNote' },
       ],
       lists: [
         { title: 'Bullet', value: 'bullet' },

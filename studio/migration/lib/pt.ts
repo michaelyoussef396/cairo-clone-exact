@@ -87,6 +87,11 @@ function block(line: string, style = 'normal'): Block {
   return { _type: 'block', _key: key(), style, markDefs, children }
 }
 
+/** Build a single Portable Text block with an explicit style. */
+export function ptBlock(text: string, style = 'normal'): Block {
+  return block(text, style)
+}
+
 /** Convert a markdown-ish string into an array of Portable Text blocks. */
 export function pt(markdown: string): Block[] {
   return markdown

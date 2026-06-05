@@ -5,6 +5,8 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Helmet } from "react-helmet-async";
 import { PortableTextContent } from "@/components/PortableTextContent";
 import { usePage } from "@/hooks/usePage";
+import { useSiteSettings } from "@/hooks/useSiteSettings";
+import { postalAddress, telephone } from "@/lib/structuredData";
 import bellydancerImage from "@/assets/belly-dancer.webp";
 import restaurantInterior from "@/assets/restaurant-interior.webp";
 import fullTable from "@/assets/full-table.webp";
@@ -18,6 +20,7 @@ const ACCENT_LINK = "text-egyptian-gold hover:underline";
 
 const Events = () => {
   const { data: page } = usePage("eventsPage");
+  const { data: site } = useSiteSettings();
   const seo = page?.seo || {};
   const hero = page?.hero || {};
   const gallery = page?.gallery || {};
@@ -36,8 +39,8 @@ const Events = () => {
     "name": "Weekly Belly Dancing & Live Entertainment at Cairo By Nights",
     "description": "Experience authentic Egyptian belly dancing and live Arabic music performances every Friday, Saturday, and Sunday evening at Cairo By Nights Carlton.",
     "image": "https://www.caironightsrestaurant.com.au/images/belly-dancer.webp",
-    "organizer": { "@type": "Restaurant", "name": "Cairo By Nights", "url": "https://www.caironightsrestaurant.com.au", "telephone": "+61396541005", "address": { "@type": "PostalAddress", "streetAddress": "5/252 Lygon Street", "addressLocality": "Carlton", "addressRegion": "VIC", "postalCode": "3053", "addressCountry": "AU" } },
-    "location": { "@type": "Restaurant", "name": "Cairo By Nights", "address": { "@type": "PostalAddress", "streetAddress": "5/252 Lygon Street", "addressLocality": "Carlton", "addressRegion": "VIC", "postalCode": "3053", "addressCountry": "AU" } },
+    "organizer": { "@type": "Restaurant", "name": "Cairo By Nights", "url": "https://www.caironightsrestaurant.com.au", "telephone": telephone(site), "address": postalAddress(site) },
+    "location": { "@type": "Restaurant", "name": "Cairo By Nights", "address": postalAddress(site) },
     "subEvent": [
       { "@type": "Event", "name": "Friday Night Belly Dancing & Live Music", "description": "Professional belly dancing at 9pm followed by live Arabic music and dance performances from 8pm-11pm", "eventSchedule": { "@type": "Schedule", "byDay": "https://schema.org/Friday", "startTime": "20:00", "endTime": "23:00" }, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "url": "https://cairo-by-nights-restaurant-bar.resos.com/booking" } },
       { "@type": "Event", "name": "Saturday Night Belly Dancing Show", "description": "Authentic Egyptian belly dance performance by professional dancers at 9pm", "eventSchedule": { "@type": "Schedule", "byDay": "https://schema.org/Saturday", "startTime": "21:00", "endTime": "22:00" }, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled", "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "url": "https://cairo-by-nights-restaurant-bar.resos.com/booking" } },
@@ -228,7 +231,7 @@ const Events = () => {
       <section className="py-20 bg-gradient-to-r from-primary/20 to-accent/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 egyptian-gold">{cta.heading || "Ready to Experience the Magic?"}</h2>
-          <PortableTextContent value={cta.linkText} linkClassName="text-primary hover:text-accent transition-colors duration-300" paragraphClassName="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto" />
+          <PortableTextContent value={cta.linkText} linkClassName="text-primary hover:text-accent transition-colors duration-300 ml-1" paragraphClassName="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto" />
           <button className="reserve-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300">{cta.buttonLabel || "Reserve Your Table"}</button>
         </div>
       </section>

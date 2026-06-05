@@ -13,6 +13,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import egyptianDishes from '@/assets/egyptian-dishes.webp';
 import { usePage } from '@/hooks/usePage';
+import { useSiteSettings } from '@/hooks/useSiteSettings';
+import { postalAddress, telephone, email, sameAs, openingHoursSpec } from '@/lib/structuredData';
 
 const DEFAULT_WHY_CARDS = [
   { title: 'Expert Egyptian Chefs', body: "Our kitchen is led by experienced Egyptian chefs who bring generations of culinary tradition from Cairo to Carlton. Each chef has mastered the art of authentic Egyptian cooking, ensuring every dish captures the true flavors and techniques of traditional Egyptian cuisine. From perfecting the blend of seven spices in our kofta to achieving the ideal slow-cooked tenderness in our tagens, our chefs' expertise shines in every bite." },
@@ -23,6 +25,7 @@ const DEFAULT_WHY_CARDS = [
 
 const Index = () => {
   const { data: page } = usePage('homePage');
+  const { data: site } = useSiteSettings();
   const welcome = page?.welcome || {};
   const why = page?.whyChoose || {};
   const visit = page?.visitUs || {};
@@ -39,15 +42,12 @@ const Index = () => {
     "description": "Authentic halal Egyptian restaurant in Carlton Melbourne featuring live belly dancing, premium shisha lounge, and traditional Middle Eastern cuisine. Experience the magic of Cairo on Lygon Street.",
     "image": "https://www.caironightsrestaurant.com.au/images/hero.jpg",
     "servesCuisine": ["Egyptian", "Middle Eastern", "Mediterranean", "Halal"], "acceptsReservations": true, "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "streetAddress": "5/252 Lygon Street", "addressLocality": "Carlton", "addressRegion": "VIC", "postalCode": "3053", "addressCountry": "AU" },
+    "address": postalAddress(site),
     "geo": { "@type": "GeoCoordinates", "latitude": "-37.8014", "longitude": "144.9672" },
-    "telephone": "+61396541005", "email": "contactus@cairobynightsrestaurant.com.au", "url": "https://www.caironightsrestaurant.com.au",
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "17:00", "closes": "23:30" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "17:00", "closes": "00:30" }
-    ],
+    "telephone": telephone(site), "email": email(site), "url": "https://www.caironightsrestaurant.com.au",
+    "openingHoursSpecification": openingHoursSpec(site),
     "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "200" },
-    "sameAs": ["https://www.facebook.com/caironights", "https://www.instagram.com/caironights"],
+    "sameAs": sameAs(site),
     "hasMenu": "https://www.caironightsrestaurant.com.au/menu", "paymentAccepted": "Cash, Credit Card, Debit Card", "currenciesAccepted": "AUD",
     "founder": { "@type": "Person", "name": "Sonny", "description": "Founder of Cairo By Nights with deep Egyptian culinary heritage" },
     "slogan": "Authentic Egyptian Nights in Carlton Melbourne",

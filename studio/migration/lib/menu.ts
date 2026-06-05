@@ -116,7 +116,8 @@ export type BuiltMenu = {
 }
 
 export function buildMenu(repoRoot: string): BuiltMenu {
-  const csv = readFileSync(resolve(repoRoot, 'src/data/menu.csv'), 'utf8')
+  // CSV is the historical migration source, kept under studio/migration (not shipped in the app).
+  const csv = readFileSync(resolve(repoRoot, 'studio/migration/menu.csv'), 'utf8')
   const rows = parseCsv(csv)
 
   const categories = categoryOrder.map((key, order) => ({

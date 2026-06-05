@@ -27,7 +27,6 @@ const SOURCE_FILES = [
   'src/pages/ContactUs.tsx',
   'src/pages/NotFound.tsx',
   'src/pages/NewMenu.tsx',
-  'src/pages/Menu.tsx',
   'src/components/Header.tsx',
   'src/components/Footer.tsx',
   'src/components/HeroSection.tsx',
@@ -35,8 +34,8 @@ const SOURCE_FILES = [
   'src/components/MenuPreview.tsx',
   'src/components/TestimonialSection.tsx',
   'src/components/FAQSection.tsx',
-  'src/utils/csvParser.ts',
-  'src/data/menu.csv',
+  'studio/migration/lib/menu.ts',
+  'studio/migration/menu.csv',
 ]
 
 const stripWs = (s: string) => s.replace(/<br\s*\/?>(?=)/gi, '').replace(/\s+/g, '')
@@ -107,7 +106,7 @@ async function run() {
   const menu = buildMenu(REPO)
   const csvBySlug: Record<string, any> = {}
   // Re-read raw CSV rows for original titles/descriptions.
-  const csvLines = readFileSync(resolve(REPO, 'src/data/menu.csv'), 'utf8').split('\n').slice(1)
+  const csvLines = readFileSync(resolve(REPO, 'studio/migration/menu.csv'), 'utf8').split('\n').slice(1)
   for (const line of csvLines) {
     if (!line.trim()) continue
     const v: string[] = []

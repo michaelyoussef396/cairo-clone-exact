@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import { PortableTextContent } from '@/components/PortableTextContent';
 import { useSiteSettings } from '@/hooks/useSiteSettings';
 import { usePage } from '@/hooks/usePage';
+import { postalAddress } from '@/lib/structuredData';
 import restaurantInterior from '@/assets/restaurant-interior.webp';
 import egyptianDishes from '@/assets/egyptian-dishes.webp';
 
@@ -32,7 +33,7 @@ const Location = () => {
 
   const locationSchema = {
     "@context": "https://schema.org", "@type": "Restaurant", "name": "Cairo By Nights",
-    "address": { "@type": "PostalAddress", "streetAddress": "5/252 Lygon Street", "addressLocality": "Carlton", "addressRegion": "VIC", "postalCode": "3053", "addressCountry": "AU" },
+    "address": postalAddress(site),
     "geo": { "@type": "GeoCoordinates", "latitude": "-37.8014", "longitude": "144.9672" }
   };
 
@@ -74,9 +75,10 @@ const Location = () => {
                   <div className="bg-primary/10 p-3 rounded-lg"><Navigation className="h-6 w-6 text-primary" /></div>
                   <div>
                     <p className="font-semibold text-foreground mb-2">{findUs.address || "5/252 Lygon Street, Carlton VIC 3053"}</p>
-                    <PortableTextContent value={findUs.body} />
+                    <PortableTextContent value={findUs.body?.slice(0, 1)} />
                   </div>
                 </div>
+                <PortableTextContent value={findUs.body?.slice(1)} />
               </div>
             </div>
             <div className="relative">

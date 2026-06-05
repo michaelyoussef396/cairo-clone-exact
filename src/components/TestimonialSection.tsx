@@ -4,18 +4,21 @@ import { useRef } from 'react';
 import happyGuests from '@/assets/happy-guests.webp';
 import { Helmet } from 'react-helmet-async';
 import { usePage } from '@/hooks/usePage';
+import { useSiteSettings } from '@/hooks/useSiteSettings';
+import { postalAddress } from '@/lib/structuredData';
 
 export const TestimonialSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { data: page } = usePage('homePage');
+  const { data: site } = useSiteSettings();
   const t = page?.testimonial || {};
 
   // Review Schema for SEO (left untouched for byte-identical JSON-LD)
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    "itemReviewed": { "@type": "Restaurant", "name": "Cairo By Nights Restaurant & Bar", "address": { "@type": "PostalAddress", "streetAddress": "5/252 Lygon Street", "addressLocality": "Carlton", "addressRegion": "VIC", "postalCode": "3053", "addressCountry": "AU" } },
+    "itemReviewed": { "@type": "Restaurant", "name": "Cairo By Nights Restaurant & Bar", "address": postalAddress(site) },
     "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
     "author": { "@type": "Person", "name": "Krystalia T" },
     "reviewBody": "Had such a fantastic night at Cairo By Nights. Food was delicious and we went on a Saturday night and there was a beautiful lady doing belly dancing which really added to the atmosphere. The music was great as well. Thank you Sonny, I'll definitely be back again!"

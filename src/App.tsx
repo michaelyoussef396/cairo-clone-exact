@@ -14,7 +14,6 @@ const Location = lazy(() => import("./pages/Location"));
 const Events = lazy(() => import("./pages/Events"));
 const FunctionRoom = lazy(() => import("./pages/FunctionRoom"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
-const Menu = lazy(() => import("./pages/Menu"));
 const NewMenu = lazy(() => import("./pages/NewMenu"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -52,7 +51,6 @@ const App = () => (
               <Route path="/function-room" element={<FunctionRoom />} />
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/menu" element={<NewMenu />} />
-              <Route path="/old-menu-admin" element={<Menu />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
