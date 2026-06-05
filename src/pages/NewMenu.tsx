@@ -37,7 +37,12 @@ const NewMenu = () => {
   const totalItems = categories.reduce((n, c) => n + c.items.length, 0);
   const cocktailsCount = categories.find((c) => c.key === 'Cocktails')?.items.length || 0;
   const mainsCount = categories.find((c) => c.key === 'mains')?.items.length || 0;
-  const categoryButtons = categories.map((c) => ({ key: c.key, display: c.displayTitle }));
+  // The original filter button for the Dips category read "Dips" (its section
+  // heading is "Dips & Spreads"); preserve that exactly.
+  const categoryButtons = categories.map((c) => ({
+    key: c.key,
+    display: c.key === 'Dips' ? 'Dips' : c.displayTitle,
+  }));
   const visibleCategories =
     activeCategory === 'all' ? categories : categories.filter((c) => c.key === activeCategory);
 
