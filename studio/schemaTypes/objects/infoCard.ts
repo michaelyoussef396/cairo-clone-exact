@@ -19,6 +19,12 @@ export const infoCard = defineType({
     }),
     defineField({ name: 'title', type: 'string', validation: (r) => r.required() }),
     defineField({ name: 'body', type: 'text', rows: 4, title: 'Body' }),
+    defineField({
+      name: 'richBody',
+      type: 'richText',
+      title: 'Rich body (optional)',
+      description: 'Use instead of Body when the card needs bold labels or multiple paragraphs.',
+    }),
     defineField({ name: 'href', type: 'string', title: 'Link (optional)' }),
     defineField({
       name: 'buttonLabel',

@@ -95,7 +95,9 @@ export const locationPage = defineType({
       group: 'carlton',
       fields: [
         defineField({ name: 'heading', type: 'string' }),
-        defineField({ name: 'body', type: 'richText' }),
+        defineField({ name: 'body', type: 'richText', description: 'Paragraphs shown beside the image.' }),
+        defineField({ name: 'image', type: 'image', options: { hotspot: true } }),
+        defineField({ name: 'bodyBelow', type: 'richText', description: 'Paragraphs shown below the image.' }),
       ],
     }),
 

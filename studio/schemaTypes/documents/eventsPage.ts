@@ -91,6 +91,11 @@ export const eventsPage = defineType({
           ],
         }),
         defineField({
+          name: 'bellyDancingNote',
+          type: 'richText',
+          description: 'Paragraph with inline links shown between the dancing and music sections.',
+        }),
+        defineField({
           name: 'music',
           type: 'object',
           fields: [

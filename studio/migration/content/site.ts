@@ -35,6 +35,9 @@ export const siteSettings = {
     ],
   },
   reservationUrl: 'https://cairo-by-nights-restaurant-bar.resos.com/booking',
+  googleMapsUrl: 'https://maps.google.com/search/5%2F252%20Lygon%20Street%2C%20Carlton%203053',
+  mapEmbedUrl:
+    'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8277165143247!2d144.96789931531915!3d-37.80015054202164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642ca46c6f4c7%3A0x5a6fb5d0c5f7e6!2s252%20Lygon%20St%2C%20Carlton%20VIC%203053%2C%20Australia!5e0!3m2!1sen!2sau!4v1634567890123',
   socialLinks: {
     facebook: 'https://www.facebook.com/caironights',
     instagram: 'https://www.instagram.com/caironights',

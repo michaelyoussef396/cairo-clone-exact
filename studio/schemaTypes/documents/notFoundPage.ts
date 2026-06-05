@@ -7,6 +7,7 @@ export const notFoundPage = defineType({
   type: 'document',
   icon: WarningOutlineIcon,
   fields: [
+    defineField({ name: 'seo', type: 'seo' }),
     defineField({ name: 'code', type: 'string', title: 'Code', description: 'e.g. "404"' }),
     defineField({ name: 'heading', type: 'string', description: 'e.g. "Page Not Found"' }),
     defineField({ name: 'intro', type: 'text', rows: 2 }),

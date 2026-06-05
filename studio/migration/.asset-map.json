@@ -69,5 +69,11 @@
   "local:entree.webp": "image-f83a14e40de80027f5d4a552910b9f5c5a4953c3-1080x1350-webp",
   "local:main-dish-1.webp": "image-b699ee22c0d8ad9a467ef94e9e4efc15438919ca-640x427-webp",
   "local:main-dish-2.webp": "image-af27b3463caf7e11c1fbee5c048a0f2d856ad689-1280x720-webp",
-  "local:beverages.webp": "image-e55ce0667cf8d6be7a3266eec8661bcb5b341e01-1920x1920-webp"
+  "local:beverages.webp": "image-e55ce0667cf8d6be7a3266eec8661bcb5b341e01-1920x1920-webp",
+  "local:restaurant-interior.webp": "image-9066ec33e20064523164e42b5e8f6dbf991ab184-1280x720-webp",
+  "local:belly-dancer.webp": "image-31f1bc125f9fa0192c6f1e8522ef5e2c6108c253-1280x720-webp",
+  "local:full-table.webp": "image-cf701f9b2d057455e35d51a6b4330195c83eaaaf-640x427-webp",
+  "local:happy-guests.webp": "image-b386b63acbacbd19b7850ebc07bf3e6e1ba858f2-1280x720-webp",
+  "local:shisha.webp": "image-0250c55197f94182bc47f1280b1cbdddb404bc3a-640x800-webp",
+  "local:bar-drinks.webp": "image-e2dd1bfb8c804a9ecf2390f75ce75e0e25c0079f-1280x720-webp"
 }
