@@ -1,17 +1,24 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import cairoLogo from '@/assets/cairo-by-nights-logo-new.png';
+import { useSiteSettings } from '@/hooks/useSiteSettings';
+
+const DEFAULT_NAV = [
+  { name: 'About Us', href: '/about-us' },
+  { name: 'Menu', href: '/menu' },
+  { name: 'Events', href: '/events' },
+  { name: 'Function Room', href: '/function-room' },
+  { name: 'Contact US', href: '/contact-us' },
+];
+const DEFAULT_RESERVATION = 'https://cairo-by-nights-restaurant-bar.resos.com/booking';
+const DEFAULT_LOGO_ALT = 'Cairo By Nights Restaurant & Bar';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { data } = useSiteSettings();
 
-  const navItems = [
-    { name: 'About Us', href: '/about-us' },
-    { name: 'Menu', href: '/menu' },
-    { name: 'Events', href: '/events' },
-    { name: 'Function Room', href: '/function-room' },
-    { name: 'Contact US', href: '/contact-us' }
-  ];
+  const navItems = data?.navItems?.length ? data.navItems : DEFAULT_NAV;
+  const reservationUrl = data?.reservationUrl || DEFAULT_RESERVATION;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-primary/20">
@@ -21,8 +28,8 @@ export const Header = () => {
           <div className="flex-shrink-0 flex items-center">
             <a href="/" className="flex items-center">
               <img
-                src={cairoLogo}
-                alt="Cairo By Nights Restaurant & Bar"
+                src={data?.logo?.url || cairoLogo}
+                alt={data?.logoAlt || DEFAULT_LOGO_ALT}
                 className="h-12 w-auto"
               />
             </a>
@@ -46,7 +53,7 @@ export const Header = () => {
           {/* Reserve Now Button */}
           <div className="hidden lg:block">
             <a
-              href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
+              href={reservationUrl}
               className="reserve-button"
               target="_blank"
               rel="noopener noreferrer"
@@ -87,7 +94,7 @@ export const Header = () => {
                 </a>
               ))}
               <a
-                href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
+                href={reservationUrl}
                 className="block reserve-button text-center mt-4"
                 target="_blank"
                 rel="noopener noreferrer"

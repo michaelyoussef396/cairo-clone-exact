@@ -1,26 +1,36 @@
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 import cairoLogo from '@/assets/cairo-by-nights-logo-new.png';
+import { useSiteSettings } from '@/hooks/useSiteSettings';
 
-export const Footer = () => {
-  const contactInfo = {
-    address: "5/252 Lygon Street, Carlton 3053",
-    phone: "03 9654 1005",
-    email: "contactus@cairobynightsrestaurant.com.au",
-    hours: {
-      weekdays: "Sunday – Thursday: 5:00pm – 11:30pm",
-      weekends: "Friday & Saturday: 5:00pm – 12:30am"
-    }
-  };
-
-  const quickLinks = [
+const DEFAULTS = {
+  logoAlt: 'Cairo By Nights Restaurant & Bar',
+  footerDescription:
+    'Experience authentic Egyptian cuisine, live belly dancing, and premium shisha in the heart of Carlton, Melbourne.',
+  address: '5/252 Lygon Street, Carlton 3053',
+  phone: '03 9654 1005',
+  email: 'contactus@cairobynightsrestaurant.com.au',
+  openingHours: {
+    weekdays: 'Sunday – Thursday: 5:00pm – 11:30pm',
+    weekends: 'Friday & Saturday: 5:00pm – 12:30am',
+  },
+  reservationUrl: 'https://cairo-by-nights-restaurant-bar.resos.com/booking',
+  copyright: '© 2024 Cairo By Nights Restaurant & Bar. All rights reserved.',
+  tagline: 'Authentic Egyptian Dining in Melbourne',
+  quickLinks: [
     { name: 'About Us', href: '/about-us' },
     { name: 'Menu', href: '/menu' },
     { name: 'Events', href: '/events' },
     { name: 'Function Room', href: '/function-room' },
     { name: 'Contact Us', href: '/contact-us' },
-    { name: 'Visit Us in Carlton', href: '/location' }
-  ];
+    { name: 'Visit Us in Carlton', href: '/location' },
+  ],
+};
 
+export const Footer = () => {
+  const { data } = useSiteSettings();
+  const s = { ...DEFAULTS, ...(data || {}) };
+  const hours = { ...DEFAULTS.openingHours, ...(data?.openingHours || {}) };
+  const quickLinks = data?.quickLinks?.length ? data.quickLinks : DEFAULTS.quickLinks;
 
   return (
     <footer className="bg-gradient-dark border-t border-primary/20">
@@ -31,36 +41,35 @@ export const Footer = () => {
           <div className="lg:col-span-1 space-y-6">
             <a href="/" className="inline-block">
               <img
-                src={cairoLogo}
-                alt="Cairo By Nights Restaurant & Bar"
+                src={data?.logo?.url || cairoLogo}
+                alt={s.logoAlt}
                 className="h-16 w-auto"
               />
             </a>
             <p className="text-muted-foreground leading-relaxed">
-              Experience authentic Egyptian cuisine, live belly dancing, and premium shisha 
-              in the heart of Carlton, Melbourne.
+              {s.footerDescription}
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-3 text-sm">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">{contactInfo.address}</span>
+                <span className="text-muted-foreground">{s.address}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                <a 
-                  href={`tel:${contactInfo.phone}`}
+                <a
+                  href={`tel:${s.phone}`}
                   className="text-muted-foreground hover:text-primary transition-colors duration-300"
                 >
-                  {contactInfo.phone}
+                  {s.phone}
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                <a 
-                  href={`mailto:${contactInfo.email}`}
+                <a
+                  href={`mailto:${s.email}`}
                   className="text-muted-foreground hover:text-primary transition-colors duration-300"
                 >
-                  {contactInfo.email}
+                  {s.email}
                 </a>
               </div>
             </div>
@@ -95,10 +104,10 @@ export const Footer = () => {
                 <Clock className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
                 <div className="space-y-2 text-sm">
                   <div className="text-muted-foreground">
-                    {contactInfo.hours.weekdays}
+                    {hours.weekdays}
                   </div>
                   <div className="text-muted-foreground">
-                    {contactInfo.hours.weekends}
+                    {hours.weekends}
                   </div>
                 </div>
               </div>
@@ -111,7 +120,7 @@ export const Footer = () => {
         <div className="border-t border-primary/20 pt-8 mb-8">
           <div className="text-center">
             <a
-              href="https://cairo-by-nights-restaurant-bar.resos.com/booking"
+              href={s.reservationUrl}
               className="reserve-button inline-block"
               target="_blank"
               rel="noopener noreferrer"
@@ -125,10 +134,10 @@ export const Footer = () => {
         <div className="border-t border-primary/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 Cairo By Nights Restaurant & Bar. All rights reserved.
+              {s.copyright}
             </p>
             <p className="text-muted-foreground text-sm">
-              Authentic Egyptian Dining in Melbourne
+              {s.tagline}
             </p>
           </div>
         </div>
