@@ -5,4 +5,5 @@ export default defineCliConfig({
     projectId: 'm1t8egcx',
     dataset: 'production',
   },
+  studioHost: 'cairo-by-nights',
 })
